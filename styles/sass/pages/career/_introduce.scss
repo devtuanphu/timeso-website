@@ -1,0 +1,157 @@
+.career-introduce {
+  padding: 5rem 0;
+
+  &-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &-title {
+    font-weight: 700;
+    letter-spacing: -2.5px;
+    color: $typography-heading;
+    margin-bottom: 1rem;
+  }
+  &-description {
+    p:first-child {
+      margin-bottom: 0.5rem;
+    }
+  }
+  &-gallery {
+    position: relative;
+    height: 507px;
+    width: 100%;
+    overflow: visible;
+    @media screen and (max-width: 1024px) {
+      height: 420px;
+    }
+  }
+
+  &-image {
+    display: flex;
+    box-shadow: 0px 8px 16px rgba(58, 123, 213, 0.4);
+    border-radius: 1rem;
+    position: relative;
+    span {
+      border-radius: 1rem;
+      width: 100%;
+      min-width: 100%;
+    }
+    &.show {
+      width: 85.2%;
+      transform: translate(0%, 0%);
+      z-index: 2;
+      top: 0;
+      bottom: auto;
+      left: 0;
+      right: auto;
+      animation: show-image 1s ease-in-out;
+      @keyframes show-image {
+        0% {
+          width: 52.73%;
+        }
+        100% {
+          width: 85.2%;
+        }
+      }
+    }
+    &.hidden {
+      width: 52.73%;
+      // height: 254px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      top: auto;
+      left: auto;
+      animation: hidden-image 1s ease-in-out;
+      opacity: 0.5;
+      @keyframes hidden-image {
+        0% {
+          width: 85.2%;
+        }
+        100% {
+          width: 52.73%;
+        }
+      }
+    }
+    &__first {
+      position: absolute;
+      width: 85.2%;
+      z-index: 2;
+    }
+    &__second {
+      width: 52.73%;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .career-introduce {
+    padding: 2.5rem 0;
+    &-gallery {
+      height: 83.47vw;
+    }
+    &-image {
+      &.show {
+        width: 92.75%;
+        @keyframes show-image {
+          0% {
+            width: 60.58%;
+          }
+          100% {
+            width: 92.75%;
+          }
+        }
+      }
+      &.hidden {
+        width: 60.58%;
+
+        @keyframes hidden-image {
+          0% {
+            width: 92.75%;
+          }
+          100% {
+            width: 60.58%;
+          }
+        }
+      }
+      &__first {
+        width: 92.75%;
+      }
+      &__second {
+        width: 60.58%;
+      }
+    }
+    &-left {
+      order: 1;
+    }
+    &-right {
+      order: 0;
+    }
+    &-title {
+      font-weight: 700;
+      letter-spacing: normal;
+    }
+    &-description {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .career-introduce {
+    padding: 2.5rem 0;
+    &-title {
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 51px;
+    }
+    &-gallery {
+      height: 313px;
+    }
+  }
+}

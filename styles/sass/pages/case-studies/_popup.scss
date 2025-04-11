@@ -1,0 +1,233 @@
+.project-mobile {
+  max-width: 575px;
+  margin: 0 auto;
+
+  .caseStudies-popup-info {
+    max-height: none;
+  }
+
+  .button-back {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.15px;
+    color: #1c1c1c;
+    max-width: fit-content;
+  }
+
+  &_back {
+    margin-left: 12px;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    margin-right: 8px;
+
+    &:hover {
+      .sketch-button-lines {
+        display: none;
+      }
+    }
+  }
+
+  &_button-change {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12px;
+    flex-flow: wrap;
+
+    button {
+      min-width: 160px;
+
+      &:hover {
+        .sketch-button-lines {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.caseStudies-popup {
+  max-width: 1116px;
+  height: auto;
+
+  &-carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0;
+
+    &--image {
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-user-drag: none;
+      -webkit-touch-callout: none;
+      object-fit: contain;
+    }
+
+    button {
+      margin-top: auto;
+    }
+  }
+
+  &-info {
+    max-height: 493px;
+    overflow-y: auto;
+    padding: 0 2.5rem 0 1.5rem;
+
+    &::-webkit-scrollbar-track {
+      border-radius: 0.5rem;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+      width: 0.5rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 0.5rem;
+      -webkit-box-shadow: inset 0 0 6px #d9d9d9;
+      background-color: #d9d9d9;
+    }
+
+    .info {
+      &-category {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0.15px;
+        background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        margin-bottom: 0.5rem;
+
+        &::selection,
+        &::-moz-selection {
+          -webkit-text-fill-color: $neutral-light !important;
+        }
+      }
+      &-title {
+        margin-bottom: 0.5rem;
+      }
+
+      &-description {
+        margin-bottom: 1.5rem;
+        white-space: pre-line;
+      }
+
+      &-heading,
+      &-content-heading {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0.15px;
+        color: $typography-heading;
+      }
+
+      &-customer {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      &-content {
+        &-heading {
+          margin-bottom: 0.5rem;
+        }
+
+        &-description {
+          display: flex;
+          gap: 0.5rem;
+          padding: 0;
+          margin-bottom: 1.5rem;
+          white-space: pre-line;
+
+          img {
+            background: linear-gradient(149.92deg, rgba(255, 255, 255, 0.26) 44.79%, rgba(58, 123, 213, 0.16) 96.66%);
+            border-radius: 0.5rem;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1199px) {
+    max-width: calc(100vw - 78px);
+  }
+
+  @media screen and (max-width: 767px) {
+    max-width: calc(100vw - 16px);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .project-mobile {
+    padding: 2.5rem 0;
+    padding-top: 1rem;
+
+    .caseStudies-popup {
+      &-info {
+        max-height: none;
+        padding: 1.5rem 0 0 0;
+      }
+
+      &-carousel {
+        &__item {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .project-mobile {
+    .caseStudies-popup {
+      &-info {
+        .info-category {
+          font-size: 16px;
+          line-height: 22.4px;
+        }
+
+        .info-title {
+          font-size: 24px;
+          line-height: 30px;
+        }
+
+        .info-heading,
+        .info-content-heading {
+          font-size: 16px;
+          line-height: 22.4px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .caseStudies-popup {
+    &-info {
+      .info {
+        &-category {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 140%;
+          letter-spacing: 0.15px;
+        }
+
+        &-title {
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 29px;
+        }
+      }
+    }
+  }
+}

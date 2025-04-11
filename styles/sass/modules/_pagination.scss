@@ -1,0 +1,80 @@
+.ant-pagination {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  .ant-pagination {
+    &-next,
+    &-prev {
+      display: flex;
+      align-items: center;
+      &:hover:enabled,
+      &:focus:enabled {
+        a,
+        .anticon {
+          color: $info;
+        }
+      }
+    }
+    &-prev {
+      margin-right: 1.5rem;
+    }
+    &-next {
+      margin-left: 1.5rem;
+    }
+    &-item {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border: none;
+      border-radius: 450px;
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        text-align: center;
+        letter-spacing: 0.16px;
+        color: #878787;
+      }
+      &-active {
+        background: linear-gradient(21.78deg, #3a7bd5 28.96%, #00d2ff 86.53%);
+        border-radius: 450px;
+        a {
+          color: $neutral-light;
+        }
+      }
+    }
+  }
+  &-disabled {
+    color: $neutral-3;
+    .am-pagination-arrow,
+    p {
+      color: $neutral-3 !important;
+      &:hover,
+      p {
+        color: $neutral-3 !important;
+      }
+    }
+  }
+  .am-pagination-arrow,
+  p {
+    color: $typography-body;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    &:hover {
+      color: $primary;
+    }
+    @media screen and (max-width: 767px) {
+      p {
+        display: none;
+      }
+    }
+  }
+}

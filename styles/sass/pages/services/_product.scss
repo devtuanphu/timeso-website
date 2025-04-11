@@ -1,0 +1,65 @@
+.service-product {
+  padding: 5rem 0;
+  &-text {
+    text-align: center;
+  }
+  &-preamble {
+    margin-bottom: 1rem;
+  }
+  &-title {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 78px;
+    letter-spacing: -2.5px;
+    color: $typography-heading;
+    margin-bottom: 1.5rem;
+  }
+  &-card {
+    &:hover {
+      .service-product-card {
+        &__image {
+          &--icon {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          }
+        }
+      }
+    }
+    .ant-card-cover {
+      padding: 1.5rem 1.5rem 1rem;
+    }
+    &__image {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      &--icon {
+        position: absolute;
+        color: $typography-body;
+        bottom: 0;
+        right: 2.5rem;
+        transform: translateY(50%);
+        padding: 1rem;
+        background-color: $neutral-light;
+        box-shadow: 0px 20px 50px rgba(198, 217, 225, 0.3);
+        border-radius: 40px;
+        display: inline-flex;
+        font-size: 1rem;
+        .anticon {
+          font-size: 2rem;
+        }
+        &:hover,
+        &:focus {
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          color: $primary;
+        }
+      }
+    }
+    &__content {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &-button {
+    width: 166px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,489 @@
+.aboutUs-leaders {
+  padding: 5rem 0;
+  overflow: hidden;
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 0;
+
+  &-title {
+    text-align: center;
+    letter-spacing: -2.5px;
+    margin-bottom: 2.5rem;
+  }
+
+  &-carousel {
+    position: relative;
+    &__container {
+      overflow: visible !important;
+      .react-multi-carousel-item:not(.react-multi-carousel-item--active) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        .card {
+          &-top {
+            &-image {
+              position: relative;
+              background-clip: padding-box;
+              padding: 2px;
+              border-radius: 50%;
+              &:before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                border-radius: 50%;
+                border: 2px solid transparent;
+                transform: rotate(120deg);
+                background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%) border-box;
+                -webkit-mask: linear-gradient(#fefefe 0 0) padding-box, linear-gradient(#fefefe 0 0);
+                -webkit-mask-composite: destination-out;
+                mask: near-gradient($neutral-light 0 0) padding-box, linear-gradient($neutral-light 0 0);
+                mask-composite: exclude;
+              }
+            }
+          }
+        }
+      }
+      .react-multi-carousel-item {
+        padding: 0 12px;
+        z-index: 2;
+        .card {
+          position: relative;
+          padding: 1.5rem;
+          background-color: $neutral-light;
+          box-shadow: 15px 50px 50px rgb(198 217 225 / 30%);
+          border-radius: 0.5rem;
+
+          &-top {
+            padding: 0 4.4375rem;
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            z-index: 0;
+
+            &-image {
+              display: flex;
+
+              img {
+                border-radius: 50%;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                -webkit-user-drag: none;
+                -webkit-touch-callout: none;
+              }
+            }
+          }
+          &-body {
+            text-align: center;
+            &-gender {
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 140%;
+              letter-spacing: 0.4px;
+            }
+            &-name {
+              margin-bottom: 0.5rem;
+            }
+            &-position {
+              height: 34px;
+              &__item {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 140%;
+                letter-spacing: 0.4px;
+                color: $typography-body;
+              }
+            }
+          }
+        }
+      }
+      .react-multi-carousel-item--active {
+        width: 475px !important;
+        min-height: 621px !important;
+        z-index: 2;
+        animation: card-active 0.5s alternate;
+        @keyframes card-active {
+          0% {
+            transform: scale(0.1);
+          }
+          100% {
+            transform: scale(1);
+          }
+        }
+        .card {
+          padding: 4rem 1.5rem 5rem;
+          height: 100%;
+          background-color: $neutral-light;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          border-radius: 0.5rem;
+          &-top {
+            padding: 0 4.4375rem;
+            display: flex;
+            align-items: center;
+            margin-bottom: 2.5rem;
+            justify-content: center;
+            position: relative;
+            &-image {
+              display: flex;
+              z-index: 0;
+              position: relative;
+              &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                border-radius: 50%;
+                border: 4px solid transparent;
+                background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%) border-box;
+                -webkit-mask: linear-gradient(#fefefe 0 0) padding-box, linear-gradient(#fefefe 0 0);
+                -webkit-mask-composite: destination-out;
+                mask: near-gradient($neutral-light 0 0) padding-box, linear-gradient($neutral-light 0 0);
+                mask-composite: exclude;
+              }
+              img {
+                border-radius: 50%;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                -webkit-user-drag: none;
+                -webkit-touch-callout: none;
+              }
+            }
+          }
+          &-body {
+            text-align: center;
+            &-gender {
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 24px;
+              letter-spacing: 0.5px;
+            }
+            &-name {
+              margin-bottom: 0.5rem;
+              color: $typography-heading;
+              font-weight: 700;
+              font-size: 36px;
+              line-height: 44px;
+              /* or 122% */
+
+              text-align: center;
+              letter-spacing: 0.25px;
+            }
+            &-position {
+              height: 56px;
+              &__item {
+                font-size: 16px;
+                line-height: 24px;
+                text-align: center;
+                letter-spacing: 0.5px;
+                margin-bottom: 0.5rem;
+              }
+            }
+          }
+        }
+      }
+
+      .carousel-button-group {
+        position: absolute;
+        left: calc(475px + 1rem);
+        display: flex;
+        width: 100%;
+        gap: 1rem;
+        bottom: calc(321px + 46px + 1.5rem);
+        .arrow {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 2.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          // box-shadow: 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 6px 10px rgba(0, 0, 0, 0.14), 0px 3px 5px -1px rgba(0, 0, 0, 0.2);
+          &:hover,
+          &:focus {
+            .sketch-button-lines {
+              display: none !important;
+            }
+          }
+          &-right {
+            left: 3.5rem;
+          }
+          &-icon {
+            width: 24px;
+            height: 24px;
+            svg {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+    }
+
+    &__content {
+      position: absolute;
+      width: calc(100% - 475px) !important;
+      right: 0;
+      top: 0;
+      padding: 0 0.75rem;
+      z-index: 1;
+      > p:not(:last-child) {
+        padding-bottom: 0.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .aboutUs-leaders {
+    padding: 2.5rem 0;
+
+    &-title {
+      letter-spacing: normal;
+    }
+    &-carousel {
+      &__carousel {
+        position: relative;
+        overflow: visible;
+        .react-multi-carousel-item--active {
+          .card {
+            &-top {
+              position: relative;
+              &-image {
+                position: relative;
+                &:after {
+                  content: '';
+                  position: absolute;
+                  inset: 0;
+                  border-radius: 50%;
+                  border: 4px solid transparent;
+                  transform: translateY(-4px);
+                  background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%) border-box;
+                  -webkit-mask: linear-gradient(#fefefe 0 0) padding-box, linear-gradient(#fefefe 0 0);
+                  -webkit-mask-composite: destination-out;
+                  mask: near-gradient($neutral-light 0 0) padding-box, linear-gradient($neutral-light 0 0);
+                  mask-composite: exclude;
+                }
+              }
+            }
+            &-body {
+              &-name {
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 24px;
+                text-align: center;
+                letter-spacing: 0.15px;
+              }
+            }
+          }
+        }
+      }
+      &__item {
+        padding: 0 0.75rem;
+        .card {
+          min-height: 532px;
+          padding: 4rem 1.5rem 1.5rem;
+          height: 100%;
+          background: $neutral-light;
+          box-shadow: 0px 8px 16px rgba(58, 123, 213, 0.4);
+          border-radius: 0.5rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          &-top {
+            margin-bottom: 2.5rem;
+            &-image {
+              img {
+                border-radius: 50%;
+              }
+            }
+          }
+          &-body {
+            margin-bottom: 1.5rem;
+            &-name {
+              margin-bottom: 0.5rem;
+            }
+            &-position {
+              &__item:not(:last-child) {
+                margin-bottom: 0.5rem;
+              }
+            }
+          }
+        }
+        .information {
+          text-align: center;
+          margin: 1.5rem;
+          min-height: auto;
+          p:not(:last-child) {
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+
+      .carousel-button-group {
+        position: absolute;
+        top: 240px;
+        bottom: auto;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        // transform: translateX(-50%);
+        .arrow {
+          width: 2.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          &:hover,
+          &:focus {
+            .sketch-button-lines {
+              display: none !important;
+            }
+          }
+          &-left {
+          }
+          &-right {
+          }
+          &-icon {
+            width: 24px;
+            height: 24px;
+            svg {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .aboutUs-leaders {
+    padding: 2.5rem 0;
+    &-title {
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 51px;
+      text-align: center;
+    }
+    &-carousel {
+      &__carousel {
+        position: relative;
+        overflow: hidden;
+        .react-multi-carousel-item--active {
+          .card {
+            &-top {
+              position: relative;
+              &-image {
+                position: relative;
+                &:after {
+                  content: '';
+                  position: absolute;
+                  inset: 0;
+                  border-radius: 50%;
+                  border: 4px solid transparent;
+                  transform: translateY(-4px);
+                  background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%) border-box;
+                  -webkit-mask: linear-gradient(#fefefe 0 0) padding-box, linear-gradient(#fefefe 0 0);
+                  -webkit-mask-composite: destination-out;
+                  mask: near-gradient($neutral-light 0 0) padding-box, linear-gradient($neutral-light 0 0);
+                  mask-composite: exclude;
+                }
+              }
+            }
+            &-body {
+              &-name {
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 24px;
+                text-align: center;
+                letter-spacing: -1px;
+              }
+            }
+          }
+        }
+      }
+      &__item {
+        padding: 0 0.75rem;
+        .card {
+          min-height: 532px;
+          padding: 4rem 1.5rem 1.5rem;
+          height: 100%;
+          background: $neutral-light;
+          box-shadow: 0px 6px 12px rgba(58, 123, 213, 0.4);
+          border-radius: 0.5rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          margin-bottom: 1rem;
+          &-top {
+            margin-bottom: 2.5rem;
+            &-image {
+              max-width: 214px;
+              img {
+                border-radius: 50%;
+              }
+            }
+          }
+          &-body {
+            margin-bottom: 1.5rem;
+            &-name {
+              margin-bottom: 0.5rem;
+            }
+            &-position {
+              &__item:not(:last-child) {
+                margin-bottom: 0.5rem;
+              }
+            }
+          }
+        }
+        .information {
+          display: none;
+        }
+      }
+
+      .carousel-button-group {
+        position: absolute;
+        top: 230px;
+        bottom: auto;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+
+        .arrow {
+          width: 40px !important;
+          height: 40px !important;
+          padding: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          &:hover,
+          &:focus {
+            .sketch-button-lines {
+              display: none !important;
+            }
+          }
+          &-icon {
+            width: 16px;
+            height: 16px;
+            svg {
+              width: 16px;
+              height: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

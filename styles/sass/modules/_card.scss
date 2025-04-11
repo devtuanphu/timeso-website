@@ -1,0 +1,104 @@
+.ant-card {
+  cursor: default;
+  height: 100%;
+  border-width: 0px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 8px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 1.5rem !important;
+  &-cover {
+    position: relative;
+    width: 100%;
+    height: 154px;
+    margin: 0 !important;
+
+    img {
+      border-radius: 1.5rem !important;
+      object-fit: cover;
+    }
+  }
+  &-meta {
+    margin: 0;
+
+    &-title {
+      margin-bottom: 1rem !important;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0.15px;
+      // display: -webkit-box;
+      // -webkit-line-clamp: 3;
+      // -webkit-box-orient: vertical;
+      // overflow: hidden;
+      white-space: normal;
+      color: $typography-heading;
+    }
+    @media screen and (max-width: 767px) {
+      &-title {
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+    &-description {
+      font-weight: 400;
+      color: $typography-body;
+      // display: -webkit-box;
+      // -webkit-line-clamp: 4;
+      // -webkit-box-orient: vertical;
+      // overflow: hidden;
+    }
+  }
+}
+
+.card {
+  &-post {
+    .ant-card {
+      &-cover {
+        min-height: 267px;
+      }
+      &-body {
+        position: relative;
+      }
+      &-meta {
+        &-title {
+          color: $danger;
+          a {
+            color: $typography-heading;
+          }
+        }
+      }
+    }
+    .card-post-hashtag {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      width: fit-content;
+      background-color: $neutral-light;
+      background: linear-gradient(180deg, rgba(58, 123, 213, 0.42) 0%, rgba(0, 210, 255, 0.42) 102.31%);
+      box-shadow: inset 0px 0px 4px rgba(255, 255, 255, 0.63);
+      backdrop-filter: blur(1px);
+      border-radius: 0.25rem;
+      padding: 0.25rem 0.875rem;
+      color: $typography-body;
+      &:hover,
+      &:focus {
+        color: $typography-body;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+    }
+    &-timeView {
+      margin-bottom: 1rem;
+    }
+    &-title {
+      color: $typography-heading;
+    }
+    &-link {
+      margin-top: 1.5rem;
+      a {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0.16px;
+        color: $info;
+      }
+    }
+  }
+}

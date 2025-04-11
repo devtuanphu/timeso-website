@@ -1,0 +1,55 @@
+{
+  "dataNoCMS": {
+    "filter_all": "전체",
+
+    "view_more": "더 보기",
+    "btn_prev": "이전 페이지",
+    "btn_next": "다음 페이지",
+
+    "keyword": "키워드",
+    "share": "기사를 공유합니다",
+    "menu_name": "기사 카테고리",
+
+    "button": "바로 다운로드",
+    "placeholder": "이메일을 입력해주세요",
+    "error_message": "Email không hợp lệ",
+    "require_message": "Vui lòng nhập email trước khi tải tài liệu",
+    "note": "Ghi chú"
+  },
+
+  "button_control": [
+    { "id": 1, "name": "전체", "filter": "all" },
+    { "id": 2, "name": "Hoạt động tại AMIT", "filter": "operating" },
+    { "id": 3, "name": "Sản phẩm của AMIT", "filter": "products" },
+    { "id": 4, "name": "eBook", "filter": "ebook" },
+    { "id": 5, "name": "Công nghệ", "filter": "technology" }
+  ],
+
+  "blog_button": {
+    "view_more": "더 보기",
+    "btn_prev": "이전 페이지",
+    "btn_next": "다음 페이지"
+  },
+
+  "template_1": {
+    "keyword": "키워드",
+    "share": "기사를 공유합니다",
+    "menu_name": "기사 카테고리",
+    "menu_item": ["Sản phẩm của AMIT", "Hoạt động tại AMIT", "eBook", "Công nghệ"]
+  },
+
+  "template_2": {
+    "button": "Tải về ngay",
+    "placeholder": "Địa chỉ email",
+    "error_message": "Email không hợp lệ",
+    "require_message": "Vui lòng nhập email trước khi tải tài liệu",
+    "note": "Ghi chú"
+  },
+
+  "other_blog": {
+    "title": "Bài viết có thể bạn quan tâm",
+    "button": "Xem tất cả",
+    "view_detail": "더 보기",
+    "slug": "/ko/blog"
+  }
+}

@@ -1,0 +1,90 @@
+.blogdetail-banner {
+  height: 35vw;
+  max-height: 672px;
+  background-repeat: no-repeat;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  background-position: center center;
+  background-size: 100% 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  &-hashtag,
+  &-title {
+    color: $typography-heading;
+    text-shadow: none;
+  }
+  &.bg-gradient {
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(360deg, rgba(0, 0, 0, 0.1) 38.54%, rgba(8, 166, 186, 0.2) 100%),
+        linear-gradient(90deg, rgba(27, 85, 165, 0.8) 0%, rgba(0, 210, 255, 0.8) 100%);
+      opacity: 0.72;
+      z-index: -1;
+    }
+
+    .blogdetail-banner-hashtag,
+    .blogdetail-banner-title {
+      color: $neutral-light;
+    }
+    .blogdetail-banner-title {
+      text-shadow: 4px 8px 4px rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  &-hashtag {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    // color: $neutral-light;
+    opacity: 1;
+  }
+  &-title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    letter-spacing: -2.5px;
+    // color: $neutral-light;
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .blogdetail {
+    &-banner {
+      height: 50vh;
+      max-height: auto;
+    }
+  }
+}
+@media only screen and (max-width: 575px) {
+  .blogdetail {
+    &-banner {
+      background-size: cover;
+      &.ebook {
+        background-position: 85% 100%;
+      }
+      &-hashtag {
+        font-size: 16px;
+        line-height: 140%;
+        text-align: center;
+      }
+      &-title {
+        font-size: 32px;
+        line-height: 44px;
+        text-align: center;
+      }
+    }
+  }
+}

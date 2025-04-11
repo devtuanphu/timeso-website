@@ -1,0 +1,112 @@
+.blog {
+  padding: 5rem 0;
+  &-control {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+    &-groupBtn {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      border: 1px solid $neutral-2;
+      border-radius: 1rem;
+      padding: 0.5rem 1rem;
+    }
+  }
+  &-post {
+    &-small {
+      &__card {
+        .ant-card {
+          &-meta {
+            &-title {
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 4; /* number of lines to show */
+              line-clamp: 4;
+              -webkit-box-orient: vertical;
+              color: $typography-body;
+            }
+            &-detail {
+              @media screen and (min-width: 768px) {
+                min-height: 135px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .ant-card-meta-description {
+                  .card-post-link {
+                    margin-top: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .blog {
+    padding: 2.5rem 0;
+    &-control {
+      margin-bottom: 1.5rem;
+      &-groupBtn {
+        display: flex;
+        border-width: 0;
+        border-radius: 0;
+        padding: 0;
+        position: relative;
+        .hashtag {
+          position: absolute;
+          top: -8px;
+          left: 10px;
+          padding: 0 4px;
+          background-color: $neutral-light;
+          z-index: 1;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 140%;
+          letter-spacing: 0.4px;
+          color: #737373;
+        }
+        .select {
+          width: 100%;
+          width: calc(100vw - 30px);
+          max-width: 345px;
+          height: 56px;
+          &.ant-select-open {
+            .ant-select-arrow {
+              svg {
+                transform: rotate(180deg);
+              }
+            }
+          }
+          .ant-select {
+            &-selector {
+              height: 100%;
+              align-items: center;
+              border-radius: 0.5rem;
+              padding: 20px;
+              box-shadow: none !important;
+            }
+            &-arrow {
+              right: 20px;
+            }
+          }
+        }
+        .select-option {
+          background-color: red;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .blog {
+    padding: 2.5rem 0;
+  }
+}

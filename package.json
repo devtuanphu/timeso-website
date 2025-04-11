@@ -1,0 +1,42 @@
+{
+  "name": "amit-group",
+  "version": "2.1.4",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "sonarqube": "sonar-scanner.bat -D\"sonar.host.url=https://sonarqube.demo-amit.com\" -D\"sonar.token=sqp_d87774fce717b756a3cf8d7893529af8f2d63a42\""
+  },
+  "dependencies": {
+    "@ant-design/icons": "5.1.4",
+    "@tawk.to/tawk-messenger-react": "^2.0.1",
+    "antd": "5.6.2",
+    "aos": "^3.0.0-beta.6",
+    "dayjs": "1.11.8",
+    "next": "13.4.6",
+    "next-seo": "^5.5.0",
+    "nextjs-progressbar": "^0.0.14",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-google-recaptcha": "^3.1.0",
+    "react-multi-carousel": "^2.8.2",
+    "react-share": "^4.4.1",
+    "react-slick": "^0.29.0",
+    "react-tsparticles": "^2.3.3",
+    "sass": "^1.54.6",
+    "slick-carousel": "^1.8.1",
+    "tsparticles": "^2.3.1",
+    "usehooks-ts": "^2.7.2"
+  },
+  "devDependencies": {
+    "@types/aos": "^3.0.4",
+    "@types/node": "18.7.14",
+    "@types/react": "18.2.13",
+    "@types/react-dom": "18.2.6",
+    "eslint": "8.43.0",
+    "eslint-config-next": "13.4.6",
+    "typescript": "5.1.3"
+  }
+}

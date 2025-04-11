@@ -1,0 +1,66 @@
+{
+  "contactForm": {
+    "title": "We are ready to help you",
+    "subtitle": "In what areas can AMIT help you?",
+    "demand": {
+      "design": "Web design",
+      "hireStaff": "Staffing",
+      "development": "Software Development",
+      "others": "Others",
+      "message": "Please choose one of these fields."
+    },
+    "form": {
+      "name": {
+        "label": "Full name",
+        "messageRequired": "Please enter your first and last name."
+      },
+      "phoneNumber": {
+        "label": "Phone number",
+        "messageRequired": "Please enter your phone number.",
+        "messageError": "Please enter the number format!. EX: +84911000038"
+      },
+      "email": {
+        "label": "Email address",
+        "messageRequired": "Please enter your Email address.",
+        "messageError": "Please enter the correct email format. Ex: example@gmail.com"
+      },
+      "company": {
+        "label": "Company name",
+        "messageRequired": "Please enter your company name."
+      },
+      "introduce": {
+        "label": "Introduction",
+        "messageRequired": "Please enter an introduction."
+      },
+      "budget": {
+        "label": "Budget for the project you want to invest (this information will help us advise you more accurately)",
+        "messageRequired": ""
+      }
+    },
+    "message": {
+      "title": "Successfully Submitted",
+      "description": "Thanks for sending us your request. We will respond to you as soon as possible.",
+      "title_warning": "Successfully Submitted",
+      "description_warning": "We have received information from you. We will respond to you as soon as possible.",
+      "title_error": "Error!",
+      "description_error": "Please check the information again. Thank you!"
+    },
+    "currency": "USD",
+    "button": "Submit"
+  },
+
+  "contactLocation": {
+    "mycompany": {
+      "label": "Our office",
+      "data": "No. 07, 7C Street, An Phu An Khanh Urban Area, An Phu Ward, Thu Duc"
+    },
+    "phoneNumber": {
+      "label": "Phone number",
+      "data": "+84.911.000.038"
+    },
+    "workingTime": {
+      "label": "Working time",
+      "data": "Monday to Friday: 8AM - 6PM"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+version: '3.6'
+services:
+  landing:
+    image: landing-prod:latest
+    build:
+      context: './'
+      dockerfile: Dockerfile
+    user: root
+    networks:
+      - amitgroup
+    restart: on-failure
+    environment:
+      APP_ENV: production
+    ports:
+      - '2080:3000'
+
+networks:
+  amitgroup:
+    driver: bridge

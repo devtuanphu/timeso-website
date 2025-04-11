@@ -1,0 +1,196 @@
+.aboutUs-culture {
+  background-color: rgba(198, 245, 255, 0.4);
+  overflow: hidden;
+  padding: 5rem 0;
+  position: relative;
+  z-index: 0;
+  &-preamble,
+  &-title {
+    margin-bottom: 0.5rem;
+  }
+  &-title {
+    font-weight: 700;
+    letter-spacing: -2.5px;
+    white-space: pre-line;
+    color: $neutral-dark;
+  }
+  &-content {
+    margin-bottom: 2.5rem;
+  }
+
+  &-carousel {
+    padding: 0 0.75rem;
+    overflow: hidden;
+    &__container {
+      width: 1330px;
+      overflow: hidden;
+    }
+    &__slider {
+      li:nth-child(even) {
+        transform: translateY(95px);
+      }
+    }
+  }
+  &-gallery {
+    &__list {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding-right: 1.5rem;
+      // width: 641px;
+
+      > .gallery-item-00,
+      .gallery-item-10,
+      .gallery-item-03,
+      .gallery-item-13 {
+        flex: 1 0 calc(40% - 1.95rem);
+        height: 261px;
+        width: 261px;
+        max-height: 261px;
+        max-width: 261px;
+        -webkit-border-radius: 0px 109px !important;
+        -moz-border-radius: 0px 109px !important;
+        border-radius: 0px 109px !important;
+      }
+
+      > .gallery-item-01,
+      .gallery-item-11,
+      .gallery-item-02,
+      .gallery-item-12 {
+        flex: 1 0 50%;
+        -webkit-border-radius: 0px 149px !important;
+        -moz-border-radius: 0px 149px !important;
+        border-radius: 0px 149px !important;
+        height: 356px;
+        width: 356px;
+        max-height: 356px;
+        max-width: 356px;
+      }
+      > :nth-child(3) {
+        transform: translateY(-95px);
+      }
+    }
+
+    &__item {
+      position: relative;
+      overflow: hidden;
+      img {
+        position: absolute !important;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-user-drag: none;
+        -webkit-touch-callout: none;
+        z-index: -1;
+        opacity: 0;
+        &.default {
+          z-index: 1;
+          opacity: 1;
+        }
+        &.active {
+          z-index: 2;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .aboutUs-culture {
+    padding: 2.5rem 0;
+    &-title {
+      font-weight: 700;
+      letter-spacing: normal;
+    }
+
+    &-carousel {
+      overflow: hidden !important;
+      padding: 0 !important;
+      margin-left: 15px !important;
+
+      &__container {
+        width: 290px;
+        // width: auto;
+        overflow: visible;
+      }
+      &__slider {
+        li:nth-child(even) {
+          transform: translateY(42px);
+        }
+      }
+      &__item {
+      }
+    }
+    &-gallery {
+      &__list {
+        gap: 10px;
+        padding-right: 10px;
+        // width: 641px;
+
+        > .gallery-item-00,
+        .gallery-item-10,
+        .gallery-item-03,
+        .gallery-item-13 {
+          flex: 1 0 calc(40% - 1.95rem);
+          height: 114px;
+          width: 114px;
+          max-height: 114px;
+          max-width: 114px;
+          min-width: 114px;
+          -webkit-border-radius: 0px 48px !important;
+          -moz-border-radius: 0px 48px !important;
+          border-radius: 0px 48px !important;
+        }
+
+        > .gallery-item-01,
+        .gallery-item-11,
+        .gallery-item-02,
+        .gallery-item-12 {
+          flex: 1 0 50%;
+          -webkit-border-radius: 0px 65px !important;
+          -moz-border-radius: 0px 65px !important;
+          border-radius: 0px 65px !important;
+          height: 156px;
+          width: 156px;
+          max-height: 156px;
+          max-width: 156px;
+          min-width: 156px;
+        }
+        > :nth-child(3) {
+          transform: translateY(-42px);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .aboutUs-culture {
+    padding: 2.5rem 0;
+    &-title {
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 51px;
+    }
+    &-content {
+      margin-bottom: 1.5rem;
+    }
+    &-carousel {
+      padding: 0px;
+    }
+    &-fixed {
+      padding: 0 39px !important;
+    }
+  }
+}

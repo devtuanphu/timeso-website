@@ -1,0 +1,53 @@
+/* groovylint-disable CompileStatic, DuplicateStringLiteral, GStringExpressionWithinString, Indentation, NestedBlockDepth, NoDef, VariableTypeRequired */
+pipeline {
+  agent none
+  environment  {
+    PROJECT_PATH = '/home/dev/landing-page-nextjs'
+    PROJECT_BRANCH = 'dev'
+  }
+  stages {
+    stage('Review Code') {
+      agent any
+      steps {
+        nodejs('NodeJS 16.20.1') {
+          sh 'npm --version'
+          script {
+            def scannerHome = tool 'SonarQube Scanner 4.8'
+            withSonarQubeEnv('SonarQube Server') {
+              sh "${scannerHome}/bin/sonar-scanner"
+            }
+          }
+        }
+      }
+    }
+    stage('Deploy QC') {
+      agent any
+      steps {
+        sshagent(credentials: ['ssh-amitgroup-fe-dev-root']) {
+          sh '''
+            ssh-keygen -R 206.189.84.136
+            ssh -o StrictHostKeyChecking=no -l root 206.189.84.136 "
+              cd ${PROJECT_PATH} &&
+              git pull origin ${PROJECT_BRANCH} &&
+              docker-compose down &&
+              docker-compose build &&
+              docker-compose up -d
+            "
+          '''
+        }
+      }
+    }
+  }
+  post {
+    success {
+      echo 'Pipeline completed successfully'
+    }
+    failure {
+      echo 'Pipeline completed with errors'
+      emailext body: '${DEFAULT_CONTENT}',
+        recipientProviders: [developers(), requestor()],
+        subject: '${DEFAULT_SUBJECT}',
+        to: '${DEFAULT_RECIPIENTS}'
+    }
+  }
+}

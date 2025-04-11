@@ -1,0 +1,107 @@
+.home-product {
+  background-color: rgba(198, 245, 255, 0.4);
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  &-left {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+
+    &__preamble,
+    &__title,
+    &__content {
+      margin-bottom: 1rem;
+    }
+
+    &__title {
+      font-weight: 700;
+      letter-spacing: -2.5px;
+      color: $typography-heading;
+    }
+  }
+
+  &-right {
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+    &__item {
+      display: flex;
+      gap: 1.5rem;
+      flex-direction: row;
+      &--image {
+        width: 71px;
+        min-width: 71px;
+        height: 71px;
+        position: relative;
+        img {
+          object-fit: contain;
+          -moz-user-select: none;
+          -webkit-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          -webkit-user-drag: none;
+          -webkit-touch-callout: none;
+        }
+      }
+      &--title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: -0.5px;
+        color: $typography-heading;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home-product {
+    padding: 2.5rem 0;
+    &::before {
+      background-position: bottom center;
+      transform: translateY(404px);
+    }
+    &-left__title {
+      letter-spacing: normal;
+    }
+    &-right {
+      margin-top: 1.5rem;
+      &__item--title {
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: normal;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .home-product {
+    padding: 2.5rem 0;
+    &-left {
+      &__preamble {
+        margin-bottom: 0.5rem;
+      }
+      &__title {
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 51px;
+      }
+    }
+    &-right {
+      &__item {
+        &--title {
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 24px;
+          letter-spacing: -1px;
+        }
+      }
+    }
+  }
+}

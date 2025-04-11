@@ -1,0 +1,57 @@
+.service-tools {
+  padding: 12.125rem 0;
+  background-color: #e6fcff;
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+  &-title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    text-align: center;
+    letter-spacing: -2.5px;
+    color: $typography-heading;
+    margin-bottom: 1.5rem;
+  }
+
+  &-list {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  &-item {
+    display: inline-flex;
+  }
+
+  &-carousel {
+    &__container {
+      overflow: visible;
+    }
+    &__item {
+      padding: 0 0.75rem;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .service-tools {
+    padding: 2.5rem 0;
+    &-title {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 44px;
+
+      text-align: center;
+      letter-spacing: 0.25px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .service-tools {
+    padding: 5rem 0;
+    &-title {
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 51px;
+    }
+  }
+}

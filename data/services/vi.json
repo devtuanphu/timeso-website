@@ -1,0 +1,13 @@
+{
+  "solution": {
+    "posts": {
+      "button_left": {
+        "title": "Tải Profile"
+      },
+      "button_right": {
+        "title": "Liên hệ",
+        "slug": "/vi/contact"
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.home-post {
+  padding: 5rem 0;
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+}

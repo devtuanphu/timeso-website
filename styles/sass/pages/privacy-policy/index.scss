@@ -1,0 +1,78 @@
+.Page-PrivacyPolicy .container {
+  padding: 80px 15px;
+
+  h4 {
+    margin: 40px 0 12px;
+  }
+
+  h5,
+  h6 {
+    margin: 12px 0;
+  }
+
+  p {
+    margin-bottom: 10px;
+    line-height: 24px;
+  }
+
+  ul {
+    margin-bottom: 32px;
+    padding-left: 24px;
+
+    li {
+      list-style: disc;
+      margin-bottom: 6px;
+      line-height: 24px;
+    }
+  }
+
+  .highlight {
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+
+    &:after {
+      content: '';
+      display: block;
+      background-color: $primary;
+      opacity: 0.24;
+      clip-path: polygon(3% 0, 100% 0%, 97% 100%, 0% 100%);
+      width: 100%;
+      height: 11px;
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 40px 15px;
+
+    h4 {
+      font-size: 18px;
+      margin: 24px 0 12px;
+    }
+
+    h5,
+    h6 {
+      font-size: 18px;
+      margin: 12px 0;
+      line-height: 24px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    ul {
+      margin-bottom: 8px;
+
+      li {
+        list-style: disc;
+        margin-bottom: 6px;
+        line-height: 24px;
+      }
+    }
+  }
+}

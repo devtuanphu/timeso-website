@@ -1,0 +1,203 @@
+// @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+html,
+body {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: $typography-body;
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+.layout-content {
+  overflow-x: hidden;
+}
+
+p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: $typography-body;
+}
+
+h1 {
+  color: #000000;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 92px;
+  letter-spacing: -2.5px;
+}
+h2 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+  letter-spacing: -2.5px;
+  color: $typography-body;
+}
+h3 {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 49px;
+  text-transform: capitalize;
+  color: $typography-body;
+}
+h4 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0.25px;
+  text-transform: capitalize;
+  color: $typography-body;
+}
+h5 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: $typography-body;
+}
+h6 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: $typography-body;
+}
+
+::selection {
+  color: #fff;
+  background: #08bed5;
+}
+
+.ant-row {
+  margin: 0 !important;
+}
+
+.text {
+  &-caption {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.4px;
+  }
+  &-overline {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  &-preamble {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    z-index: 1;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    color: $typography-body;
+    letter-spacing: normal;
+    span {
+      font-weight: 700;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 11px;
+      opacity: 0.24;
+      width: 100%;
+      display: block;
+      background-color: $primary;
+      clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
+      z-index: -1;
+    }
+  }
+}
+
+.ant-rate-star {
+  &-first,
+  &-second {
+    font-size: 26px;
+    font-weight: 900;
+  }
+  &-second {
+    color: #c9c9c9;
+  }
+}
+
+.ant-menu-horizontal > .ant-menu-item-selected a {
+  color: $typography-body;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 0 3px;
+  }
+  .text {
+    &-preamble {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140%;
+      letter-spacing: 0.15px;
+      span {
+        font-weight: 700;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 11px;
+        opacity: 0.24;
+        width: 100%;
+        display: block;
+        background-color: $primary;
+        clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
+        z-index: -1;
+      }
+    }
+  }
+
+  h2,
+  h3 {
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: normal;
+  }
+
+  h6 {
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: normal;
+    color: $typography-body;
+  }
+
+  p,
+  a {
+    font-size: 14px;
+    line-height: 1.6;
+    letter-spacing: normal;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    padding: 0 27px;
+  }
+  .text {
+    &-preamble {
+      font-size: 16px;
+      line-height: 140%;
+      letter-spacing: 0.15px;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+.ant-tabs {
+  &-nav {
+    margin-bottom: 0 !important;
+    &-wrap {
+      padding-top: 0.5rem;
+    }
+    &-list {
+      padding-top: 0.75rem;
+      width: 100%;
+      position: relative;
+      justify-content: space-between;
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        height: 2px;
+        border-top: 2px solid $neutral-2;
+        width: 100%;
+        z-index: 0;
+      }
+    }
+  }
+  &-tab {
+    padding: 0.5rem 1rem 1.5rem 1rem;
+
+    &-btn {
+      color: $neutral-3;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+    }
+    background: $neutral-3 !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    // text-fill-color: transparent;
+    color: transparent !important;
+    &-active {
+      .ant-tabs-tab-btn {
+        background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        background-clip: text !important;
+        // text-fill-color: transparent;
+        color: transparent !important;
+      }
+      ::selection {
+        -webkit-text-fill-color: #fff !important;
+        color: #fff !important;
+      }
+      ::-moz-selection {
+        -webkit-text-fill-color: #fff !important;
+        color: #fff !important;
+      }
+    }
+  }
+  &-ink-bar {
+    background-image: url('../../../public/assets/tab-active.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    width: 57px;
+    height: 19px !important;
+    background-color: transparent !important;
+    transform: translateY(-55px);
+    z-index: 1;
+  }
+}
+
+.ant-tabs-top > .ant-tabs-nav::before {
+  border-color: transparent;
+}
+
+@media screen and (max-width: 767px) {
+  .ant-tabs {
+    &-tab {
+      margin: 0px !important;
+      &-btn {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 140%;
+        letter-spacing: 0.15px;
+      }
+    }
+  }
+}

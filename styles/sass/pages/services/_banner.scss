@@ -1,0 +1,119 @@
+.banner-service {
+  &-background {
+    position: relative;
+    z-index: 1;
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(360deg, rgba(0, 0, 0, 0.1) 38.54%, rgba(8, 166, 186, 0.2) 100%),
+        linear-gradient(90deg, rgba(27, 85, 165, 0.8) 0%, rgba(0, 210, 255, 0.8) 100%);
+      opacity: 0.72;
+    }
+  }
+  &-top {
+    height: calc(100vh - 76px - 228px);
+    min-height: 350px;
+    max-height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+    &__subtitle {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 30px;
+      color: $neutral-light;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.5px;
+    }
+
+    &__title {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 59px;
+      letter-spacing: -2.5px;
+      color: $neutral-light;
+      text-shadow: 4px 8px 4px rgba(0, 0, 0, 0.4);
+      text-transform: capitalize;
+    }
+  }
+  &-bottom {
+    padding: 5rem 0;
+    &__carousel {
+      width: 100%;
+      &--item {
+        display: flex;
+        padding: 0 0.75rem;
+        span {
+          width: 100% !important;
+          img {
+            object-fit: contain;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-user-drag: none;
+            -webkit-touch-callout: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .banner-service {
+    &-top {
+      min-height: 502px;
+      height: calc(100vh - 76px - 121px);
+      &__subtitle {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        text-align: center;
+        letter-spacing: 0.15px;
+      }
+      &__title {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 44px;
+        text-align: center;
+        letter-spacing: 0.25px;
+        br {
+          display: none;
+        }
+      }
+    }
+    &-fluid {
+      padding-right: 0;
+      padding-left: 15px;
+    }
+
+    &-bottom {
+      padding: 2.5rem 0;
+    }
+  }
+}
+@media screen and (max-width: 375px) {
+  .banner-service {
+    &-top {
+      padding: 0 4px !important;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .banner-service {
+    &-top {
+      height: calc(100vh - 76px - 148px);
+    }
+    &-fluid {
+      padding: 0 !important;
+    }
+    &-bottom {
+      padding: 2.5rem 0 !important;
+    }
+  }
+}

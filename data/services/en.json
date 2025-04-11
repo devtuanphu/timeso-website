@@ -1,0 +1,13 @@
+{
+  "solution": {
+    "posts": {
+      "button_left": {
+        "title": "Download Profile"
+      },
+      "button_right": {
+        "title": "Contact",
+        "slug": "/contact"
+      }
+    }
+  }
+}

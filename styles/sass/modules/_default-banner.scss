@@ -1,0 +1,72 @@
+.default-banner {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  &-title {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 92px;
+    text-align: center;
+    letter-spacing: -2.5px;
+    margin-bottom: 0.5rem;
+    text-shadow: -4px 8px 4px rgba(0, 0, 0, 0.4);
+    color: $neutral-light;
+  }
+  &-description {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    letter-spacing: 0.25px;
+    color: $typography-heading;
+    margin-bottom: 0.5rem;
+    color: $neutral-light;
+  }
+  &-content {
+    color: $neutral-light;
+    max-width: 736px;
+    margin: 0 auto;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .default-banner {
+    &-title {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 60px;
+    }
+    &-description {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+      letter-spacing: 0.15px;
+    }
+    &-content {
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .default-banner {
+    &-title {
+      font-weight: 700;
+      font-size: 56px;
+      line-height: 68px;
+      text-align: center;
+      letter-spacing: -2.5px;
+      text-shadow: -4px 8px 4px rgba(0, 0, 0, 0.4);
+    }
+    &-description {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 29px;
+      text-shadow: 0px 22px 49px rgba(0, 47, 122, 0.39), 0px 16px 40px rgba(0, 47, 122, 0.4);
+    }
+  }
+}

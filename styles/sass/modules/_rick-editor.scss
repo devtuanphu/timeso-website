@@ -1,0 +1,99 @@
+.rickEditor {
+  &-content {
+    &-h6,
+    &-h6__first {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0.15px;
+      color: $typography-heading;
+      margin-bottom: 0.5rem;
+    }
+    &-h6 {
+      margin-top: 2.5rem;
+    }
+    &-h6__first {
+      .rickEditor-content-h6 {
+        margin-top: 0;
+      }
+    }
+
+    &-ul {
+      margin-bottom: 0 !important;
+    }
+    &-li {
+      margin-left: 24px;
+      position: relative;
+      &::before {
+        content: '•';
+        font-size: 20px;
+        position: absolute;
+        left: -1rem;
+        top: -1px;
+      }
+    }
+    &-figure,
+    &-thumbnail {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2.5rem;
+      img {
+        object-fit: cover;
+      }
+      p {
+        margin-top: 1rem;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 140%;
+        letter-spacing: 0.4px;
+        color: $typography-heading;
+        margin-bottom: 0 !important;
+      }
+    }
+
+    &-image {
+      display: inline-flex;
+    }
+
+    &-figure {
+      margin-top: 2.5rem;
+    }
+
+    &-heading {
+      margin-top: 2.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      font-size: 42.6px;
+      line-height: 52px;
+      color: $typography-heading;
+      text-align: left;
+    }
+
+    &-paragraph {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.5px;
+      color: $typography-heading;
+      text-align: left;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .rickEditor {
+    &-content {
+      &-heading {
+        font-size: 20px;
+        line-height: 24px;
+        margin-top: 1.5rem;
+      }
+      &-figure {
+        margin-bottom: 1.5rem;
+        margin-top: 1.5rem;
+      }
+    }
+  }
+}

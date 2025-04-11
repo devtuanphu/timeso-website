@@ -1,0 +1,126 @@
+.service-introduce {
+  position: relative;
+  padding: 5rem 0;
+
+  &-custom,
+  &-offshore__top {
+    background-color: rgba(198, 245, 255, 0.4);
+  }
+
+  &-offshore {
+    &__top,
+    &__bottom {
+      position: relative;
+      z-index: 0;
+
+      &::before {
+        content: '';
+        position: absolute;
+        max-width: 1920px;
+        margin: 0 auto;
+        z-index: -1;
+        inset: 0;
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &-uxui {
+    position: relative;
+    z-index: 0;
+    &.uxui-even {
+      background-color: rgba(198, 245, 255, 0.4);
+    }
+
+    &.uxui-even,
+    &.uxui-odd {
+      &::after,
+      &::before {
+        content: '';
+        position: absolute;
+        max-width: 1920px;
+        margin: 0 auto;
+        z-index: -1;
+        inset: 0;
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &-title {
+    font-weight: 700;
+    letter-spacing: -2.5px;
+    color: $typography-heading;
+    margin-bottom: 1rem;
+    white-space: pre-line;
+  }
+  &-image {
+    position: relative;
+    display: flex;
+    img {
+      object-fit: contain;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .service-introduce {
+    padding: 2.5rem 0;
+    &-title {
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 51px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .service-introduce {
+    padding: 2.5rem 0;
+    &-custom {
+      &::before {
+        display: none;
+      }
+    }
+    &-uxui {
+      &.uxui-odd {
+        &::before {
+          display: none;
+        }
+      }
+    }
+    &-text {
+      order: 2;
+    }
+    &-image {
+      // max-height: 74.7vw;
+      display: flex;
+      justify-content: center;
+    }
+    &-title {
+      letter-spacing: normal;
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .service-introduce {
+    &::before {
+      // width: 275px;
+      height: 323px;
+      // left: 0;
+      top: -4.7rem;
+      transform: matrix(-0.98, -0.21, -0.21, 0.98, 0, 0);
+      background-size: contain;
+    }
+  }
+}

@@ -1,0 +1,180 @@
+.contactForm {
+  background: linear-gradient(149.92deg, rgba(255, 255, 255, 0.26) 44.79%, rgba(58, 123, 213, 0.16) 96.66%);
+  padding: 7.5rem 0;
+  &-form {
+    background-color: $neutral-light;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0px 8px 16px rgba(58, 123, 213, 0.4);
+    border-radius: 1rem;
+    padding: 2.5rem 0.75rem;
+    .ant-input {
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 1000px #fefefe inset !important;
+      }
+      &:focus {
+        box-shadow: none !important;
+      }
+    }
+    .ant-form-item {
+      margin-bottom: 1rem;
+      &-explain-error {
+        padding: 0 12px;
+      }
+    }
+    &-title {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 44px;
+      letter-spacing: 0.25px;
+      color: $typography-heading;
+      margin-bottom: 2.5rem;
+    }
+    &-subtitle {
+      margin-bottom: 1rem;
+    }
+    &-groupBtn {
+      .ant-radio-group {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        flex-flow: wrap;
+      }
+    }
+    &-radioBtn {
+      background: $neutral-1 !important;
+      border-radius: 64px !important;
+      opacity: 0.6;
+      border: none;
+      &.ant-radio-button-wrapper {
+        &:first-child {
+          border-left: 0;
+        }
+      }
+      .ant-radio-button {
+        border: 1px solid #d9d9d9;
+        border-radius: 64px;
+      }
+      &::before {
+        display: none !important;
+      }
+      .ant-radio-button {
+        &-checked {
+          background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+          border-radius: 64px;
+        }
+      }
+      &.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled),
+      &.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
+        color: $neutral-1 !important;
+        opacity: 1;
+        box-shadow: none;
+      }
+      &:hover {
+        color: #3a7bd5;
+        box-shadow: 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 6px 10px rgba(0, 0, 0, 0.14), 0px 3px 5px -1px rgba(0, 0, 0, 0.2);
+      }
+    }
+    &-slider {
+      margin-bottom: 0 !important;
+      .ant-form-item-label {
+        label {
+          height: auto;
+          white-space: pre-line;
+          text-align: left;
+        }
+      }
+      > div {
+        display: flex;
+        flex-direction: column;
+        .ant-form-item {
+          &-label {
+            position: relative !important;
+            display: flex;
+            margin-left: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+          &-control {
+            margin-top: 58px;
+            min-height: 0;
+            &-input {
+              min-height: 0;
+              margin-bottom: 8px;
+            }
+          }
+        }
+      }
+      &-range {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+      }
+    }
+
+    &-submit {
+      margin-bottom: 0 !important;
+      .ant-form-item-control-input-content {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+    .ant-tooltip {
+      z-index: 90;
+    }
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .contactForm {
+    padding: 5rem 0;
+    &-form {
+      &-title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 44px;
+        letter-spacing: 0.25px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contactForm {
+    padding: 2.5rem 0;
+    &-form {
+      &-title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+      }
+      &-groupBtn {
+        .ant-radio-group {
+          gap: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .contactForm-form-slider > div .ant-form-item-label {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .contactForm {
+    &-form {
+      &-groupBtn {
+        .ant-radio-group {
+          gap: 0.7rem;
+        }
+      }
+    }
+  }
+}

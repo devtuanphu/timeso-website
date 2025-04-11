@@ -1,0 +1,90 @@
+@property --leftColor {
+  syntax: '<color>';
+  initial-value: transparent;
+  inherits: false;
+}
+
+@property --rightColor {
+  syntax: '<color>';
+  initial-value: transparent;
+  inherits: false;
+}
+
+.feedback {
+  display: flex;
+  padding: 20px 5px 20px 20px;
+  width: 380px;
+  max-width: 640px;
+  background-image: linear-gradient(90deg, var(--leftColor), var(--rightColor));
+  transition: --leftColor 0.4s, --rightColor 0.4s, width 0.4s, height 0.4s;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+
+  .image {
+    width: 68px;
+    height: 68px;
+    margin-right: 8px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .info {
+    > * {
+      width: max-content;
+    }
+
+    .name {
+      font-size: 20px;
+      font-weight: 700;
+      color: #1c1c1c;
+    }
+
+    .title {
+      font-size: 14px;
+      color: #363636;
+    }
+  }
+
+  .detail {
+    position: absolute;
+    left: 104px;
+    visibility: hidden;
+    min-width: min(calc(100vw - 136px), 504px);
+    width: calc(100vw - 136px);
+    max-width: 504px;
+    color: #ffffff;
+    font-size: 14px;
+    overflow: hidden;
+  }
+
+  &:hover {
+    --leftColor: #cbf6ff;
+    --rightColor: transparent;
+  }
+
+  &.active {
+    --leftColor: #00d2ff;
+    --rightColor: #3a7bd5;
+    width: 100vw;
+
+    .info {
+      display: none;
+    }
+
+    .detail {
+      visibility: visible;
+      position: relative;
+      left: 0;
+    }
+  }
+
+  @media screen and (min-width: 640px) {
+    align-items: center;
+    .detail {
+      position: static;
+    }
+  }
+}

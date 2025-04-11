@@ -1,0 +1,59 @@
+{
+  "jobs": {
+    "sub_title": "TUYỂN DỤNG",
+
+    "title": "Tìm kiếm cơ hội việc làm dành cho bạn",
+
+    "placeholder_search": "Tìm kiếm",
+
+    "arrow_left": "Trang trước",
+
+    "arrow_right": "Trang sau",
+
+    "button_view": "Nộp đơn",
+
+    "button_view_disabled": "Hết hạn nộp"
+  },
+
+  "application": {
+    "title": "ĐƠN ỨNG TUYỂN",
+    "name": {
+      "label": "Họ và Tên",
+      "messageRequired": "Vui lòng nhập Họ và tên."
+    },
+    "phone": {
+      "label": "Số điện thoại",
+      "messageRequired": "Vui lòng nhập số điện thoại.",
+      "messageError": "Số điện thoại không hợp lệ. VD: +84911000038"
+    },
+    "email": {
+      "label": "Địa chỉ mail",
+      "messageRequired": "Vui lòng nhập Email.",
+      "messageError": "Email không hợp lệ"
+    },
+    "introduce": {
+      "label": "Lời giới thiệu",
+      "messageRequired": "Vui lòng nhập lời giới thiệu."
+    },
+    "upload": {
+      "label": "Tải CV lên",
+      "guidline": "Bạn chỉ có thể tải lên tệp doc, docx và pdf. Kích thước tệp tối đa là 25MB",
+      "messageRequired": "Vui lòng tải CV để chúng tôi biết rõ hơn thông tin về bạn"
+    },
+    "notification": {
+      "title": "Gửi thành công",
+      "message": "Cảm ơn bạn đã nộp đơn ứng tuyển vào AMIT. Chúng tôi sẽ phản hồi sớm nhất với bạn."
+    },
+    "button": "Nộp Đơn Ngay"
+  },
+
+  "career_detailContent": {
+    "button_apply": "Nộp đơn",
+
+    "button_apply_disabled": "Hết hạn nộp",
+
+    "experience": "Năm kinh nghiệm",
+
+    "expired_name": "Hạn chót nộp hồ sơ"
+  }
+}

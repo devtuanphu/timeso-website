@@ -1,0 +1,21 @@
+.ant-dropdown {
+  &-open {
+    color: $primary !important;
+    .anticon-down {
+      rotate: 180deg;
+    }
+  }
+  &-menu {
+    padding: 1rem 0;
+    border-radius: 0.25rem;
+    &-item {
+      padding: 0.5rem 1rem;
+      &:hover {
+        background: rgba(8, 190, 213, 0.24);
+      }
+    }
+  }
+  &-trigger {
+    color: #333;
+  }
+}

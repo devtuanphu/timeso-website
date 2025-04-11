@@ -1,0 +1,55 @@
+{
+  "jobs": {
+    "placeholder_search": "검색",
+
+    "arrow_left": "이전 페이지",
+
+    "arrow_right": "다음 페이지",
+
+    "button_view": "자세히 보기",
+
+    "button_view_disabled": "접수가 마감됐습니다"
+  },
+
+  "application": {
+    "title": "지원서",
+    "name": {
+      "label": "성명",
+      "messageRequired": "성명을 입력해주세요."
+    },
+    "phone": {
+      "label": "전화번호",
+      "messageRequired": "전화번호를 입력해주세요.",
+      "messageError": "전화번호가 부적합하지 않습니다. 예시: +84911000038"
+    },
+    "email": {
+      "label": "이메일 주소",
+      "messageRequired": "이메일을 입력해주세요.",
+      "messageError": "이메일이 부적합하지 않습니다"
+    },
+    "introduce": {
+      "label": "소개말",
+      "messageRequired": "소개말을 입력해주세요."
+    },
+    "upload": {
+      "label": "CV 업로드",
+      "guidline": "당신은 doc, docx 및 pdf만 업로드할 수 있습니다. 최대 파일 크기가 25MB입니다.",
+      "messageRequired": "우리가 당신에 대한 정보를 자세히 알 수 있도록 CV를 업로드 해주세요"
+    },
+    "notification": {
+      "title": "성공 제출했습니다",
+      "message": "AMIT에 지원서를 보내서 감사합니다. 우리는 빠른 시일 내에 당신에게 답해주시겠습니다."
+    },
+    "button": "바로 제출"
+  },
+
+  "career_detailContent": {
+    "button_apply": "제출",
+
+    "button_apply_disabled": "접수가 마감됐습니다",
+
+    "experience": "년의 경험",
+
+    "expired_name": "접수 마감"
+  }
+}

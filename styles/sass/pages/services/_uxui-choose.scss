@@ -1,0 +1,104 @@
+.service-uxuiChoose {
+  padding: 5rem 0;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    max-width: 1920px;
+    margin: 0 auto;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.5;
+  }
+  &-preamble {
+    margin-bottom: 1rem;
+  }
+  &-title {
+    font-weight: 700;
+    letter-spacing: -2.5px;
+    color: $typography-heading;
+    margin-bottom: 1rem;
+  }
+  &-content {
+    margin-bottom: 1.5rem;
+  }
+
+  &-item {
+    background-color: $neutral-light;
+    box-shadow: 0px 8px 16px rgba(58, 123, 213, 0.4);
+    // box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.02), 0px 2px 4px rgba(0, 0, 0, 0.08);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    &:focus,
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    &__title {
+      margin: auto;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0.15px;
+      color: $typography-heading;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .service-uxuiChoose {
+    &::after {
+      display: none;
+    }
+    &-title {
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 0.25px;
+    }
+    &-item {
+      padding: 1.5rem 0.5rem;
+      &__image {
+        width: 56px;
+        height: 56px;
+      }
+
+      &__title {
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: normal;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .service-uxuiChoose {
+    padding: 2.5rem 0;
+    &-preamble {
+      margin-bottom: 0.5rem;
+    }
+    &-item {
+      padding: 20px 24px;
+      &__title {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 140%;
+        /* or 20px */
+
+        text-align: center;
+        letter-spacing: 0.1px;
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.ant-input {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  &:focus,
+  &-focused {
+    box-shadow: $primary;
+  }
+}
+
+.ant-form:not(.sh-form) {
+  .ant-form-item {
+    &-control-input-content {
+      position: relative;
+      > * {
+        &:focus {
+          &.am-input-legend {
+            top: -22px !important;
+            background-color: red !important;
+          }
+        }
+      }
+    }
+    .ant-form-item-label {
+      position: absolute;
+      margin-left: 12px;
+      margin-top: 12px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.5px;
+      background-color: $neutral-light;
+      color: $neutral-4;
+      transform: translateY(0px);
+      // animation: activeBlur 0.3s alternate;
+      z-index: 1;
+      // @keyframes activeBlur {
+      //   0% {
+      //     transform: translateY(-26px);
+      //     opacity: 0;
+      //   }
+      //   100% {
+      //     transform: translateY(0px);
+      //     opacity: 1;
+      //   }
+      // }
+      &.active {
+        transform: translateY(-26px);
+        animation: activeFocus 0.3s ease-in-out;
+        padding: 0;
+        @keyframes activeFocus {
+          0% {
+            transform: translateY(0px);
+          }
+          100% {
+            transform: translateY(-26px);
+          }
+        }
+      }
+      label {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+        color: $neutral-4;
+        padding: 0 0.25rem;
+        &::after,
+        &::before {
+          display: none !important;
+        }
+      }
+    }
+    &-explain-error {
+      margin-top: 0.25rem;
+      margin-bottom: 1rem;
+    }
+  }
+}

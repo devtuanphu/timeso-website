@@ -1,0 +1,55 @@
+{
+  "dataNoCMS": {
+    "filter_all": "Tất cả",
+
+    "view_more": "Xem thêm",
+    "btn_prev": "Trang trước",
+    "btn_next": "Trang sau",
+
+    "keyword": "Từ khoá",
+    "share": "Chia sẻ bài viết",
+    "menu_name": "DANH MỤC BÀI VIẾT",
+
+    "button": "Tải về ngay",
+    "placeholder": "Địa chỉ email",
+    "error_message": "Email không hợp lệ",
+    "require_message": "Vui lòng nhập email trước khi tải tài liệu",
+    "note": "Ghi chú"
+  },
+
+  "button_control": [
+    { "id": 1, "name": "Tất cả", "filter": "all" },
+    { "id": 2, "name": "Hoạt động tại AMIT", "filter": "operating" },
+    { "id": 3, "name": "Sản phẩm của AMIT", "filter": "products" },
+    { "id": 4, "name": "eBook", "filter": "ebook" },
+    { "id": 5, "name": "Công nghệ", "filter": "technology" }
+  ],
+
+  "blog_button": {
+    "view_more": "Xem thêm",
+    "btn_prev": "Trang trước",
+    "btn_next": "Trang sau"
+  },
+
+  "template_1": {
+    "keyword": "Từ khoá",
+    "share": "Chia sẻ bài viết",
+    "menu_name": "DANH MỤC BÀI VIẾT",
+    "menu_item": ["Sản phẩm của AMIT", "Hoạt động tại AMIT", "eBook", "Công nghệ"]
+  },
+
+  "template_2": {
+    "button": "Tải về ngay",
+    "placeholder": "Địa chỉ email",
+    "error_message": "Email không hợp lệ",
+    "require_message": "Vui lòng nhập email trước khi tải tài liệu",
+    "note": "Ghi chú"
+  },
+
+  "other_blog": {
+    "title": "Bài viết có thể bạn quan tâm",
+    "button": "Xem tất cả",
+    "view_detail": "Xem thêm",
+    "slug": "/vi/blog"
+  }
+}

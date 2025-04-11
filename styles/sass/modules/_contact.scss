@@ -1,0 +1,57 @@
+.contact {
+  padding: 5rem 0;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.1) 38.54%, rgba(8, 166, 186, 0.2) 100%),
+      linear-gradient(90deg, rgba(27, 85, 165, 0.8) 0%, rgba(0, 210, 255, 0.8) 100%), #1c1c1c;
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .container {
+    position: relative;
+    text-align: center;
+  }
+
+  &-preamble {
+    margin-bottom: 1rem;
+    color: $neutral-light;
+  }
+
+  &-title {
+    color: $neutral-light;
+    white-space: pre-line;
+  }
+
+  &-button {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    button {
+      min-width: 160px;
+    }
+  }
+  @media screen and (min-width: 767px) and (max-width: 1023px) {
+    padding: 2.5rem 0;
+
+    &-title {
+      font-size: 42px;
+      line-height: 51px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 2.5rem 0;
+  }
+}

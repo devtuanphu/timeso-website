@@ -1,0 +1,55 @@
+{
+  "dataNoCMS": {
+    "filter_all": "All",
+
+    "view_more": "View details",
+    "btn_prev": "Previous page",
+    "btn_next": "Next page",
+
+    "keyword": "Key words",
+    "share": "Share post",
+    "menu_name": "Blog categories",
+
+    "button": "Download now",
+    "placeholder": "Your email address",
+    "error_message": "Invalid email",
+    "require_message": "Please enter your email before downloading the document",
+    "note": "Note"
+  },
+
+  "button_control": [
+    { "id": 1, "name": "All", "filter": "all" },
+    { "id": 2, "name": "Life at AMIT", "filter": "operating" },
+    { "id": 3, "name": "AMIT's products", "filter": "products" },
+    { "id": 4, "name": "eBook", "filter": "ebook" },
+    { "id": 5, "name": "Technology", "filter": "technology" }
+  ],
+
+  "blog_button": {
+    "view_more": "View details",
+    "btn_prev": "Previous page",
+    "btn_next": "Next page"
+  },
+
+  "template_1": {
+    "keyword": "Key words",
+    "share": "Share post",
+    "menu_name": "Blog categories",
+    "menu_item": ["AMIT’s Product ", "Life at AMIT", "eBook", "Technology"]
+  },
+
+  "template_2": {
+    "button": "Download now",
+    "placeholder": "Your email address",
+    "error_message": "Invalid email",
+    "require_message": "Please enter your email before downloading the document",
+    "note": "Note"
+  },
+
+  "other_blog": {
+    "title": "Blogs that may interest you",
+    "button": "View all",
+    "view_detail": "View details",
+    "slug": "/en/blog"
+  }
+}

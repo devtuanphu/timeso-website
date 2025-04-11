@@ -1,0 +1,196 @@
+.careerdetail-application {
+  padding: 7.5rem 0;
+  background: linear-gradient(180deg, rgba(58, 123, 213, 0.42) 0%, rgba(0, 210, 255, 0.42) 102.31%);
+  &-form {
+    background-color: $neutral-light;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0px 8px 16px rgba(58, 123, 213, 0.4);
+    border-radius: 1rem;
+    padding: 2.5rem 1.5rem;
+
+    .ant-input {
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 1000px #fefefe inset !important;
+      }
+      &:focus {
+        box-shadow: none !important;
+      }
+    }
+
+    .ant-form-item {
+      margin-bottom: 1rem;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.5px;
+      &-explain-error {
+        padding: 0 12px;
+      }
+      .ant-upload {
+        &-select-picture {
+          margin-top: 11px;
+          .ant-upload {
+            color: $info;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+            letter-spacing: 0.16px;
+            .anticon-arrow-up {
+              margin-right: 8px;
+            }
+          }
+        }
+        &-list-item {
+          background: linear-gradient(89.71deg, #c6f5ff -2.43%, #fefcff 103.41%);
+          border-radius: 4px;
+          border: 1px solid $primary;
+          &-name {
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 18px;
+            letter-spacing: 0.16px;
+            color: $typography-heading;
+          }
+          &-card-actions-btn {
+            background: transparent !important;
+          }
+          &-list-type-picture {
+            padding: 0.5rem;
+            height: 42px;
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+      .ant-form-item-extra {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+        color: $typography-body;
+      }
+    }
+  }
+  &-submit {
+    margin-top: 2.5rem;
+    margin-bottom: 0 !important;
+    .ant-form-item-control-input-content {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &-title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 45px;
+    text-align: center;
+    letter-spacing: 0.25px;
+    background: linear-gradient(90deg, #ff5f6d 0%, #ffc371 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-bottom: 2.5rem;
+  }
+
+  &-upload {
+    .input-upload {
+      padding: 12px 0;
+      position: relative;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+      letter-spacing: 0.16px;
+      color: $info;
+      span {
+        margin-right: 8px;
+      }
+      input {
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        &::file-selector-button {
+          display: none;
+        }
+      }
+    }
+    .guidline {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.5px;
+      color: $typography-body;
+      padding-top: 5px;
+    }
+    .show-file-input {
+      background: linear-gradient(89.71deg, #c6f5ff -2.43%, #fefcff 103.41%);
+      border-radius: 4px;
+      border: 1px solid #08bed5;
+      padding: 9px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      span {
+        max-width: calc(100% - 50px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      svg {
+        margin-right: 6px;
+      }
+      .remove-file {
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        &:hover {
+          svg {
+            fill: red;
+          }
+        }
+        svg {
+          margin-right: 0;
+        }
+      }
+    }
+    .error-upload {
+      font-size: 14px;
+      color: #ff5938;
+      padding: 0 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .careerdetail-application {
+    padding: 2.5rem 0;
+    &-form {
+      padding: 1.5rem;
+    }
+    &-title {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .careerdetail-application {
+    padding: 5rem 0;
+  }
+}

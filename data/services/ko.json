@@ -1,0 +1,13 @@
+{
+  "solution": {
+    "posts": {
+      "button_left": {
+        "title": "프로필 다운로드"
+      },
+      "button_right": {
+        "title": "연락",
+        "slug": "/ko/contact"
+      }
+    }
+  }
+}

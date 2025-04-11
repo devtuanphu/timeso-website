@@ -1,0 +1,72 @@
+.contact-follow {
+  padding: 6rem 0;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 302px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.1) 38.54%, rgba(8, 166, 186, 0.2) 100%),
+      linear-gradient(90deg, rgba(27, 85, 165, 0.8) 0%, rgba(0, 210, 255, 0.8) 100%), #1c1c1c;
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+  }
+
+  &_content {
+    &-title {
+      text-align: center;
+      color: $neutral-light;
+      text-transform: none;
+      white-space: pre-line;
+    }
+
+    &-socials {
+      margin-top: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        &:first-child {
+          margin-right: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .contact-follow {
+    min-height: 248px;
+    &_content {
+      &-title {
+        h3 {
+          font-size: 36px;
+          line-height: 44px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .contact-follow {
+    &_content {
+      &-title h3 {
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 51px;
+      }
+    }
+  }
+}

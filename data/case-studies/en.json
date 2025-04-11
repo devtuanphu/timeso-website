@@ -1,0 +1,21 @@
+{
+  "dataNoCMS": {
+    "category_type": ["Project", "ASP"],
+    "category_type_filter": ["Case Studies", "ASP Solutions"],
+    "view_all": "All",
+    "view_detail": "View details",
+    "customer_name": "Client",
+    "tech_name": "Technology",
+    "os_name": "Operating system",
+    "challenge_name": "Challenge",
+    "solution_name": "Solution",
+    "customers_number_name": "Customers number: ",
+    "main_feature_name": "Main Feature",
+    "benefit_name": "Benefit",
+    "button_prev": "Previous project",
+    "button_next": "Next project",
+    "arrow_left": "Previous page",
+    "arrow_right": "Next page",
+    "download_proposal": "Download proposal"
+  }
+}

@@ -1,0 +1,81 @@
+.home-choose {
+  padding: 5rem 0;
+
+  &-title {
+    color: $typography-heading;
+    margin-bottom: 1.5rem;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  &-preamble {
+    margin-bottom: 1rem;
+  }
+  &-card {
+    &-title {
+      white-space: normal;
+    }
+    &-description {
+      color: #000000;
+    }
+  }
+
+  .ant-card {
+    box-shadow: 0px 8px 16px rgba(58, 123, 213, 0.4);
+    &:hover,
+    &:focus {
+      box-shadow: 0px 8px 16px rgba(17, 12, 46, 0.15);
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home-choose {
+    padding: 2.5rem 0;
+    &-title {
+      font-weight: 700;
+      letter-spacing: 0.25px;
+    }
+    &-slide {
+      &__container {
+        max-width: 80%;
+        margin-top: 1.5rem;
+        overflow: visible;
+      }
+      &__item {
+        padding: 0 0.75rem;
+      }
+    }
+    &-card {
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .home-choose {
+    padding: 2.5rem 0;
+    &-title {
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 51px;
+    }
+    &-slide {
+      &__container {
+        max-width: 72%;
+        margin-top: 1.5rem;
+        overflow: visible;
+      }
+      &__item {
+        padding: 0 0.75rem;
+      }
+    }
+    &-card {
+      height: 100%;
+    }
+  }
+}

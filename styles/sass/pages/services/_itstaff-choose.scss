@@ -1,0 +1,114 @@
+.service-itstaffChoose {
+  padding: 5rem 0;
+  position: relative;
+  z-index: 2;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('../../../../public/assets/service/itStaffing/chooseBackground.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    opacity: 0.5;
+  }
+
+  &-preamble {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+  }
+  &-title {
+    color: $typography-heading;
+    margin-bottom: 1.5rem;
+  }
+
+  &-item {
+    &.odd {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .card {
+      background-color: #ffffff;
+      max-width: 356px;
+      &:hover,
+      &:focus {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      width: 100%;
+      min-height: 228px;
+      border-radius: 1.5rem;
+      position: relative;
+      padding: 1.5rem;
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 1.5rem;
+        border: 2px solid transparent;
+        background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%) border-box;
+        -webkit-mask: linear-gradient($neutral-light 0 0) padding-box, linear-gradient($neutral-light 0 0);
+        -webkit-mask-composite: destination-out;
+        mask: near-gradient($neutral-light 0 0) padding-box, linear-gradient($neutral-light 0 0);
+        mask-composite: exclude;
+      }
+
+      &-title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0.15px;
+        color: $typography-heading;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  .service-itstaffChoose {
+    padding: 2.5rem 0;
+
+    &-item {
+      display: flex;
+      justify-content: center;
+      &.odd {
+        justify-content: center;
+      }
+    }
+
+    &-preamble {
+      margin-bottom: 0.5rem;
+    }
+
+    .card {
+      &-title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: -1px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .service-itstaffChoose {
+    &-preamble {
+      margin-bottom: 0.5rem;
+    }
+    &-title {
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 51px;
+    }
+    .card {
+      &-title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: -1px;
+      }
+    }
+  }
+}

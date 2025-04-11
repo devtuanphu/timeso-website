@@ -1,0 +1,21 @@
+{
+  "dataNoCMS": {
+    "category_type": ["Dự án", "Phần mềm"],
+    "category_type_filter": ["Dự án đã thực hiện", "Phần mềm có sẵn"],
+    "view_all": "Tất cả",
+    "view_detail": "Xem chi tiết",
+    "customer_name": "Khách hàng",
+    "tech_name": "Công nghệ",
+    "os_name": "Hệ điều hành",
+    "challenge_name": "Thử thách",
+    "solution_name": "Giải pháp",
+    "customers_number_name": "Số lượng khách hàng: ",
+    "main_feature_name": "Tính năng chính",
+    "benefit_name": "Lợi ích",
+    "button_prev": "Dự án trước",
+    "button_next": "Dự án sau",
+    "arrow_left": "Trang trước",
+    "arrow_right": "Trang sau",
+    "download_proposal": "Tải proposal"
+  }
+}

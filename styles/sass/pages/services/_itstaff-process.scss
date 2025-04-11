@@ -1,0 +1,200 @@
+.service-itstaffProcess {
+  padding: 5rem 0;
+  background-color: $primary;
+  &-title {
+    text-align: center;
+    // color: $typography-heading;
+    color: $neutral-light;
+    margin-bottom: 4.25rem;
+  }
+
+  &-list {
+    overflow: visible !important;
+  }
+  &-item {
+    position: relative;
+    &:first-child,
+    &:nth-child(2),
+    &:nth-child(3) {
+      // border: 1px solid red;
+      overflow: visible !important;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 41%;
+        max-width: 120px;
+        height: 16px;
+        top: 52px;
+        right: -58px;
+        background-image: url('../../../../public/assets/arrow-left.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        @media screen and (min-width: 1024px) and (max-width: 1199px) {
+          width: 7vw;
+          right: -36px;
+        }
+      }
+    }
+
+    .card {
+      padding: 0 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      &-image {
+        &::after {
+          content: '';
+          width: 1px;
+          height: 40px;
+          position: absolute;
+          background-color: $neutral-light;
+          bottom: -4.5rem;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 2;
+        }
+        position: relative;
+        display: inline-flex;
+        margin-bottom: 5.5rem;
+        img {
+          border-radius: 15rem;
+          object-fit: cover;
+        }
+        &-number {
+          position: absolute;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          top: 0;
+          right: 0;
+          align-items: center;
+          justify-content: center;
+          // background-color: $neutral-9;
+          background-color: $neutral-light;
+          color: $neutral-dark;
+          border-radius: 1.25rem;
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 18px;
+          text-align: center;
+          letter-spacing: 0.16px;
+        }
+      }
+      &-content {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.15px;
+        // color: $typography-heading;
+        margin: auto;
+        color: $neutral-light;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .service-itstaffProcess {
+    padding: 2.5rem 0;
+
+    &-title {
+      margin-bottom: 1.5rem;
+    }
+
+    &-item {
+      &:first-child,
+      &:nth-child(2),
+      &:nth-child(3) {
+        &::after {
+          content: none;
+        }
+      }
+      .card {
+        padding: 0;
+        &-content {
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .service-itstaffProcess {
+    padding-bottom: 1rem;
+    &-item {
+      &:last-child {
+        .card {
+          padding-bottom: 1.5rem;
+          &::after {
+            content: none;
+          }
+        }
+      }
+      .card {
+        padding-bottom: 4.5rem;
+        &::after {
+          content: '';
+          position: absolute;
+          background-image: url('../../../../public/assets/arrow-bottom.png');
+          background-repeat: no-repeat;
+          bottom: 16px;
+          width: 17px;
+          height: 43px;
+        }
+        &-image {
+          margin-bottom: 0;
+          // &-number {
+          //   display: none;
+          // }
+          &::after {
+            content: none;
+          }
+        }
+        &-content {
+          padding-top: 1rem;
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .service-itstaffProcess {
+    padding: 2.5rem 0;
+    &-title {
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 51px;
+      margin-bottom: 1.5rem;
+    }
+    &-item {
+      &:first-child,
+      &:nth-child(2),
+      &:nth-child(3) {
+        &::after {
+          top: 64px;
+          right: -24px;
+          width: 44px;
+          height: 10px;
+        }
+      }
+    }
+    .card {
+      &-content {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        text-align: center;
+        letter-spacing: 0.15px;
+      }
+    }
+  }
+}

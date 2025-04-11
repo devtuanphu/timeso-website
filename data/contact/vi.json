@@ -1,0 +1,66 @@
+{
+  "contactForm": {
+    "title": "Chúng tôi sẵn sàng giúp bạn",
+    "subtitle": "AMIT có thể hỗ trợ bạn trong lĩnh vực gì?",
+    "demand": {
+      "design": "Web design",
+      "hireStaff": "Thuê nhân sự",
+      "development": "Software Development",
+      "others": "Khác",
+      "message": "Chọn 1 trong các lĩnh vực"
+    },
+    "form": {
+      "name": {
+        "label": "Họ và Tên",
+        "messageRequired": "Vui lòng nhập Họ và tên"
+      },
+      "phoneNumber": {
+        "label": "Số điện thoại",
+        "messageRequired": "Vui lòng nhập số điện thoại.",
+        "messageError": "Số điện thoại không hợp lệ. VD: +84911000038"
+      },
+      "email": {
+        "label": "Địa chỉ mail",
+        "messageRequired": "Vui lòng nhập Email.",
+        "messageError": "Email không hợp lệ"
+      },
+      "company": {
+        "label": "Tên công ty",
+        "messageRequired": "Vui lòng nhập tên công ty"
+      },
+      "introduce": {
+        "label": "Lời giới thiệu",
+        "messageRequired": "Vui lòng nhập lời giới thiệu."
+      },
+      "budget": {
+        "label": "Ngân sách tài chính cho dự án muốn đầu tư (thông tin này sẽ giúp chúng tôi tư vấn cho bạn được chính xác hơn)",
+        "messageRequired": ""
+      }
+    },
+    "message": {
+      "title": "Gửi thành công",
+      "description": "Cảm ơn bạn đã đóng góp ý kiến để chúng tôi phát triển. Chúng tôi sẽ phản hồi sớm nhất với bạn.",
+      "title_warning": "Gửi thành công",
+      "description_warning": "Chúng tôi đã nhận được thông tin từ bạn. Chúng tôi sẽ phản hồi sớm nhất với bạn.",
+      "title_error": "Lỗi!",
+      "description_error": "Hãy kiểm tra lại các thông tin. Cảm ơn bạn!"
+    },
+    "currency": "VNĐ",
+    "button": "Gửi yêu cầu"
+  },
+
+  "contactLocation": {
+    "mycompany": {
+      "label": "Văn phòng của chúng tôi",
+      "data": "Số 07, Đường 7C, KĐT An Phú An Khánh, phường An Phú, TP. Thủ Đức"
+    },
+    "phoneNumber": {
+      "label": "Số điện thoại",
+      "data": "+84.911.000.038"
+    },
+    "workingTime": {
+      "label": "Giờ làm việc",
+      "data": "Thứ 2 đến Thứ 6: 8AM - 6PM"
+    }
+  }
+}

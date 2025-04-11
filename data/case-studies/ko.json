@@ -1,0 +1,21 @@
+{
+  "dataNoCMS": {
+    "category_type": ["프로젝트", "소프트웨어"],
+    "category_type_filter": ["수행한 프로젝트", "사용 가능한 소프트웨어"],
+    "view_all": "전체",
+    "view_detail": "자세히 보기",
+    "customer_name": "고객",
+    "tech_name": "기술",
+    "os_name": "운영체계",
+    "challenge_name": "도전",
+    "solution_name": "솔루션",
+    "customers_number_name": "고객수: ",
+    "main_feature_name": "주요 기능",
+    "benefit_name": "이익",
+    "button_prev": "이전 프로젝트",
+    "button_next": "다음 프로젝트",
+    "arrow_left": "이전 페이지",
+    "arrow_right": "다음 페이지",
+    "download_proposal": "제안서 다운로드"
+  }
+}

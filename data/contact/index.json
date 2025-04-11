@@ -1,0 +1,29 @@
+{
+  "vi": {
+    "button_1": {
+      "name": "Tải Profile"
+    },
+    "button_2": {
+      "name": "Liên hệ",
+      "slug": "/vi/contact"
+    }
+  },
+  "en": {
+    "button_1": {
+      "name": "Download Profile"
+    },
+    "button_2": {
+      "name": "Contact us",
+      "slug": "/en/contact"
+    }
+  },
+  "ko": {
+    "button_1": {
+      "name": "프로필 다운로드"
+    },
+    "button_2": {
+      "name": "연락",
+      "slug": "/ko/contact"
+    }
+  }
+}

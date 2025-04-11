@@ -1,0 +1,23 @@
+.ant-tooltip {
+  &-arrow {
+    &-content {
+      background: $info-1 !important;
+      --antd-arrow-background-color: $info-1 !important;
+      box-shadow: none !important;
+    }
+  }
+  &-inner {
+    color: $typography-body;
+    border-radius: 2px;
+    background: $info-1 !important;
+    padding: 0 0.5rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    min-height: 0px !important;
+    letter-spacing: 0.5px;
+    box-shadow: none !important;
+  }
+}

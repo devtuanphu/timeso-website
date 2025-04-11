@@ -1,0 +1,277 @@
+.ant-btn {
+  border-width: 0px;
+  padding: 0.625rem 1.5rem;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  height: auto;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  box-shadow: none;
+  // z-index: -1;
+  background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+  position: relative;
+  .btn {
+    &-content {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+      letter-spacing: 0.16px;
+      font-family: 'Montserrat', sans-serif;
+      z-index: 2;
+      a {
+        color: $neutral-light;
+      }
+    }
+  }
+
+  // sizes
+  &-lg {
+    padding: 0.75rem 1.5rem;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  &-sm {
+    padding: 0.5rem 1rem;
+    font-size: 13px;
+    line-height: 14px;
+  }
+
+  // colors
+  &-primary {
+    &:hover,
+    &:focus,
+    &:active {
+      background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+      .btn-content {
+        color: #fff;
+      }
+    }
+    &:disabled {
+      background: $neutral-2;
+      color: $neutral-4 !important;
+      &:hover {
+        background: $neutral-2 !important;
+        .sketch-button-lines {
+          display: none;
+        }
+        .btn-content {
+          color: $neutral-4 !important;
+        }
+      }
+    }
+    &.btn {
+      &-border {
+        position: relative;
+        border: 1px solid #00d2ff;
+        background: #fff;
+
+        &:focus:hover,
+        &:hover {
+          background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+          .btn-content {
+            color: #fff;
+            -webkit-text-fill-color: #fff;
+          }
+          .lines {
+            display: none;
+          }
+          &:active {
+            background: #fff;
+            .btn-content {
+              -webkit-text-fill-color: transparent;
+            }
+          }
+        }
+        &:focus {
+          background: #fff;
+        }
+        .btn {
+          &-content {
+            background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          }
+        }
+        &:active {
+          .btn {
+            &-content {
+              -webkit-text-fill-color: #fff;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+  &:hover {
+    .sketch-button-lines {
+      display: block;
+    }
+  }
+}
+
+.ripple-button {
+  & > .ripple {
+    width: 20px;
+    height: 20px;
+    position: absolute !important;
+    background: $primary-2;
+    display: block;
+    content: '';
+    border-radius: 9999px;
+    opacity: 1;
+    animation: 0.5s ease 1 forwards ripple-effect;
+    z-index: 1 !important;
+  }
+  @keyframes ripple-effect {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(7);
+      opacity: 0.375;
+    }
+    100% {
+      transform: scale(35);
+      opacity: 0;
+    }
+  }
+}
+
+.sketch-button {
+  &-lines {
+    display: none;
+    span {
+      position: absolute;
+      display: block;
+    }
+    span:nth-child(1) {
+      height: 3px;
+      width: 200px;
+      top: 0px;
+      left: -200px;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(255, 255, 255), rgba(0, 0, 0, 0));
+      border-top-right-radius: 1px;
+      border-bottom-right-radius: 1px;
+      animation: span1 1s linear infinite;
+    }
+    @keyframes span1 {
+      0% {
+        left: -200px;
+      }
+      100% {
+        left: 200px;
+      }
+    }
+    span:nth-child(2) {
+      height: 70px;
+      width: 3px;
+      top: -70px;
+      right: 0px;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(255, 255, 255), rgba(0, 0, 0, 0));
+      border-bottom-left-radius: 1px;
+      border-bottom-right-radius: 1px;
+      animation: span2 1s linear infinite;
+      animation-delay: 0.3s;
+    }
+    @keyframes span2 {
+      0% {
+        top: -70px;
+      }
+
+      100% {
+        top: 70px;
+      }
+    }
+    span:nth-child(3) {
+      height: 3px;
+      width: 200px;
+      right: -200px;
+      bottom: 0px;
+      background: linear-gradient(to left, rgba(0, 0, 0, 0), rgb(255, 255, 255), rgba(0, 0, 0, 0));
+      border-top-left-radius: 1px;
+      border-bottom-left-radius: 1px;
+      animation: span3 1s linear infinite;
+    }
+    @keyframes span3 {
+      0% {
+        right: -200px;
+      }
+
+      100% {
+        right: 200px;
+      }
+    }
+    span:nth-child(4) {
+      height: 70px;
+      width: 3px;
+      bottom: -70px;
+      left: 0px;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0), rgb(255, 255, 255), rgba(0, 0, 0, 0));
+      border-top-right-radius: 1px;
+      border-top-left-radius: 1px;
+      animation: span4 1s linear infinite;
+      animation-delay: 0.3s;
+    }
+    @keyframes span4 {
+      0% {
+        bottom: -70px;
+      }
+
+      100% {
+        bottom: 70px;
+      }
+    }
+  }
+}
+
+.filter-button {
+  background: $neutral-1 !important;
+  color: $neutral-3;
+  border-radius: 64px;
+  padding: 0.3125rem 0.75rem;
+  .btn-content {
+    font-weight: 500 !important;
+    font-size: 15px !important;
+    line-height: 26px !important;
+    letter-spacing: 0.46px !important;
+    -webkit-text-fill-color: $neutral-4 !important;
+  }
+  &.active {
+    background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%) !important;
+    color: $neutral-light;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+    .btn-content {
+      -webkit-text-fill-color: $neutral-light !important;
+    }
+  }
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    .sketch-button-lines {
+      display: none;
+    }
+  }
+  &:hover:not(.active) {
+    .btn-content {
+      background: -webkit-linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      // color: transparent !important;
+    }
+  }
+}
+
+@keyframes stroke {
+  30%,
+  55% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 4;
+    opacity: 1;
+  }
+}

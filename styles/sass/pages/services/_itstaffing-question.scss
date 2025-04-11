@@ -1,0 +1,162 @@
+.service-itstaffQuestion {
+  position: relative;
+  z-index: 2;
+  padding: 5rem 0;
+  &-list {
+    position: relative;
+    // flex-wrap: nowrap;
+    // background-color: $neutral-light;
+    justify-content: center;
+  }
+
+  &-item {
+    z-index: 2;
+    min-width: 451px;
+    height: 496px;
+    .box {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    &:first-child {
+      width: 100%;
+      margin-right: 0.75rem;
+      background: url('./../../../../public/assets/service/itStaffing/quote-left.svg') no-repeat;
+      background-position: center;
+    }
+    &:last-child {
+      margin-left: 0.75rem;
+      background: url('./../../../../public/assets/service/itStaffing/quote-right.svg') no-repeat;
+      background-position: center;
+    }
+
+    &__title {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 39px;
+      text-align: center;
+      letter-spacing: 0.25px;
+      color: $typography-heading;
+      padding: 10px;
+    }
+  }
+  &-solution {
+    padding-top: 2.5rem;
+    &_content {
+      background: linear-gradient(90deg, rgba(0, 210, 255, 0.16) 0%, rgba(58, 123, 213, 0.16) 100%);
+      mix-blend-mode: normal;
+      backdrop-filter: blur(12px);
+      padding: 2.5rem;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 30px;
+      color: #363636;
+      border-radius: 16px;
+      position: relative;
+      letter-spacing: normal;
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 16px;
+        padding: 2px; /* control the border thickness */
+        background: linear-gradient(to left top, #00d2ff 15%, #dfebf9 20%, #dfebf9 74%, #3a7bd5 125%);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .service-itstaffQuestion {
+    &::before,
+    &::after {
+      content: none;
+    }
+
+    &-list {
+      position: relative;
+
+      &::after {
+        background-position: 100% 40%;
+        background-size: 80%;
+      }
+    }
+
+    &-item {
+      max-width: 343px;
+      min-width: 343px;
+      height: 378px;
+
+      &:first-child,
+      &:last-child {
+        background-size: contain;
+      }
+
+      &__title {
+        font-size: 24px;
+        line-height: 29px;
+        letter-spacing: normal;
+      }
+    }
+
+    &-solution {
+      &_content {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .service-itstaffQuestion {
+    padding: 2.5rem 0;
+    &-list {
+      padding: 0 27px;
+      gap: 1.5rem;
+      display: flex;
+      flex-wrap: nowrap;
+    }
+    &-item {
+      z-index: 2;
+      min-width: auto;
+      // height: 300px;
+      .box {
+        padding: 1.5rem;
+      }
+      &:first-child {
+        margin-right: 0rem;
+        background-size: contain;
+      }
+      &:last-child {
+        margin-left: 0rem;
+        background-size: contain;
+      }
+      &__title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+        color: $typography-heading;
+      }
+    }
+    &-solution {
+      padding-top: 0;
+      &_content {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        letter-spacing: -1px;
+      }
+    }
+  }
+}

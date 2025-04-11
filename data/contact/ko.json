@@ -1,0 +1,66 @@
+{
+  "contactForm": {
+    "title": "우리가 당신을 도와줄 준비가 되어 있습니다",
+    "subtitle": "AMIT는 당신을 어떤 분야에 도와줄 수 있으신가요?",
+    "demand": {
+      "design": "Web design",
+      "hireStaff": "인력 제공",
+      "development": "Software Development",
+      "others": "기타",
+      "message": "분야들 중에 하나를 골라주제요"
+    },
+    "form": {
+      "name": {
+        "label": "성명",
+        "messageRequired": "성명을 입력해주세요"
+      },
+      "phoneNumber": {
+        "label": "전화번호",
+        "messageRequired": "전화 번호를 입력해주세요.",
+        "messageError": "전화번호가 부적합하지 않습니다. 예시: +84911000038"
+      },
+      "email": {
+        "label": "이메일 주소",
+        "messageRequired": "이메일을 입력해주세요.",
+        "messageError": "이메일이 부적합하지 않습니다"
+      },
+      "company": {
+        "label": "회사이름",
+        "messageRequired": "회사이름을 입력해주세요"
+      },
+      "introduce": {
+        "label": "소개말",
+        "messageRequired": "소개말을 입력해주세요."
+      },
+      "budget": {
+        "label": "투자하고 싶은 프로젝트에 대한 재정 예산 (이 정보는 우리가 당신에게 정확하게 상담해줄 것입니다)",
+        "messageRequired": ""
+      }
+    },
+    "message": {
+      "title": "성공 보냈습니다",
+      "description": "우리의 발전을 위해 의견을 기여해주셔서 감사합니다. 우리는 빠른 시일 내에 당신에게 답해주시겠습니다.",
+      "title_warning": "성공 보냈습니다",
+      "description_warning": "당신의 정보를 잘 받았습니다. 우리는 빠른 시일 내에 당신에게 답해주시겠습니다.",
+      "title_error": "Lỗi!",
+      "description_error": "정보를 다시 한번 확인해주세요. 감사합니다!"
+    },
+    "currency": "VNĐ",
+    "button": "요청 보내"
+  },
+
+  "contactLocation": {
+    "mycompany": {
+      "label": "우리의 사무실",
+      "data": "07번, 7C로, An Phu An Khanh도시, An Phu동, Thu Duc시"
+    },
+    "phoneNumber": {
+      "label": "전화번호",
+      "data": "+84.911.000.038"
+    },
+    "workingTime": {
+      "label": "근무시간",
+      "data": "월요일부터 금요일까지: 오전 8시 - 오후 6시"
+    }
+  }
+}

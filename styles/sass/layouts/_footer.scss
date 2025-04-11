@@ -1,0 +1,163 @@
+.footer {
+  &-top {
+    margin-bottom: 5rem !important;
+
+    &-logo {
+      img {
+        object-fit: contain;
+        height: auto;
+      }
+    }
+
+    a {
+      color: $typography-body;
+
+      &:hover,
+      &:focus {
+        color: $primary;
+      }
+    }
+
+    &-location {
+      &__item {
+        display: inline-flex;
+        flex-direction: space-between;
+        // align-items: center;
+        justify-content: flex-start;
+
+        &--image {
+          min-width: 40px;
+          width: 40px;
+          height: 40px;
+
+          img {
+            object-fit: cover;
+          }
+        }
+
+        &--text {
+          padding: 0 1.5rem;
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+          overflow: hidden;
+
+          .location {
+            &-name {
+              font-weight: 600;
+              font-size: 18px;
+              line-height: 22px;
+              letter-spacing: -1px;
+              color: $typography-body;
+              margin-bottom: 0.25rem;
+
+              &.phone {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 140%;
+                padding-top: 4px;
+              }
+            }
+          }
+
+          .mail,
+          .phone {
+            color: $typography-body;
+
+            a {
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-body {
+    margin-bottom: 2.5rem !important;
+    justify-content: space-between;
+
+    @media screen and (min-width: 1024px) {
+      div {
+        flex-grow: 1;
+        flex-shrink: 1;
+        max-width: fit-content;
+      }
+    }
+
+    .title {
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0.15px;
+      color: $typography-body;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+
+      a {
+        font-size: 16px;
+        color: $typography-body;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+
+    .icons {
+      display: flex;
+      gap: 0.5rem;
+    }
+  }
+
+  &-bottom {
+    hr {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    &-top {
+      margin-bottom: 1.5rem !important;
+
+      &-location {
+        margin-top: 1.5rem;
+      }
+    }
+
+    &-body {
+      text-align: center;
+
+      .icons {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .footer {
+    &-body {
+      margin-bottom: 0 !important;
+
+      ul {
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .footer {
+    &-top {
+      &-logo {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}

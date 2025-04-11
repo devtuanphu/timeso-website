@@ -1,0 +1,17 @@
+.ant-slider {
+  margin: 0;
+  padding: 0;
+  &-rail {
+    background: $neutral-2;
+    height: 0.5rem;
+    border-radius: 1rem;
+  }
+  &-track {
+    background: $primary;
+    height: 0.5rem;
+  }
+  &-handle {
+    margin-top: -3px;
+    background: $primary;
+  }
+}

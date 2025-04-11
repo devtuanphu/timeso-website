@@ -1,0 +1,240 @@
+.service-developmentService {
+  padding: 5rem 0;
+
+  &-preamble {
+    margin-bottom: 0.5rem;
+  }
+  &-title {
+    color: $typography-heading;
+    margin-bottom: 1rem;
+    max-width: 800px;
+  }
+  &-content {
+    max-width: 855px;
+  }
+
+  .card {
+    width: 100%;
+    @media screen and (min-width: 768px) {
+      &:hover {
+        .card-inner {
+          transform: rotateY(180deg);
+        }
+      }
+    }
+
+    &-inner {
+      position: relative;
+      min-height: 400px;
+      // background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+      transition: transform 1s;
+      transform-style: preserve-3d;
+    }
+    &-front,
+    &-back {
+      color: #fff;
+      position: absolute;
+      inset: 0;
+      padding: 2.5rem 1.5rem;
+      transform-style: preserve-3d;
+      backface-visibility: hidden;
+      border-radius: 1rem;
+
+      &-title {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 39px;
+        letter-spacing: 0.25px;
+        transform: translateZ(3rem);
+      }
+    }
+    &-front {
+      background-color: $neutral-1;
+      &-bg {
+        &__0,
+        &__3 {
+          background-color: $primary;
+        }
+        &__1,
+        &__4 {
+          background-image: linear-gradient(90deg, $primary 0%, #0469a2 100%);
+        }
+        &__2,
+        &__5 {
+          background-color: $primary-8;
+        }
+      }
+      &-title {
+        color: $neutral-light;
+      }
+      &::before {
+        content: '';
+        color: #fff;
+        position: absolute;
+        inset: 0.5rem;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        transform: translateZ(3rem);
+        z-index: -1;
+      }
+      &-bg {
+        &__0 {
+          &::before {
+            background-image: url('../../../../public/assets/flowers/flower-0.svg');
+          }
+        }
+        &__1 {
+          &::before {
+            transform: translateY(-2%);
+            background-image: url('../../../../public/assets/flowers/flower-1.svg');
+          }
+        }
+        &__2 {
+          &::before {
+            transform: translateY(-7%);
+            background-image: url('../../../../public/assets/flowers/flower-2.svg');
+          }
+        }
+        &__3 {
+          &::before {
+            transform: translateY(-3%);
+            background-image: url('../../../../public/assets/flowers/flower-3.svg');
+          }
+        }
+        &__4 {
+          &::before {
+            transform: translateY(-5%);
+            background-image: url('../../../../public/assets/flowers/flower-4.svg');
+          }
+        }
+        &__5 {
+          &::before {
+            background-image: url('../../../../public/assets/flowers/flower-5.svg');
+          }
+        }
+      }
+    }
+
+    &-back {
+      isolation: isolate;
+      background: $primary-7;
+      transform: rotateY(180deg);
+      z-index: 1;
+      &-title {
+        color: $neutral-light;
+        margin-bottom: 2.5rem;
+      }
+      &-content {
+        color: $neutral-light;
+        transform: translateZ(3rem);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768) and (max-width: 1023px) {
+  .service-developmentService {
+    padding: 2.5rem 0;
+    &-title {
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 51px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .service-developmentService {
+    padding: 2.5rem 0;
+    &-title {
+      font-weight: 700;
+      letter-spacing: 0.25px;
+    }
+    &-content {
+      margin-bottom: 0.5rem;
+    }
+    .card {
+      &.active {
+        .card-inner {
+          transform: rotateY(180deg);
+        }
+      }
+      &-inner {
+        @media screen and (max-width: 575px) {
+          height: 74.7vw;
+          min-height: 100%;
+        }
+      }
+      &-front,
+      &-back {
+        &-title {
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 29px;
+          letter-spacing: 0.15px;
+        }
+      }
+      &-front {
+        &-bg {
+          &__0 {
+            &::before {
+              transform: translateY(-5%) translateX(-8%);
+              background-image: url('../../../../public/assets/flowers/flower-0.svg');
+              background-size: 100% 48vw;
+            }
+          }
+          &__1 {
+            &::before {
+              transform: translateY(-10%) translateX(5%);
+              background-image: url('../../../../public/assets/flowers/flower-1.svg');
+              background-size: 100% 42.67vw;
+            }
+          }
+          &__2 {
+            &::before {
+              transform: translateY(-10%) translateX(5%);
+              background-image: url('../../../../public/assets/flowers/flower-2.svg');
+              background-size: 100% 42.67vw;
+            }
+          }
+          &__3 {
+            &::before {
+              transform: translateY(-10%) translateX(25%);
+              background-image: url('../../../../public/assets/flowers/flower-3.svg');
+              background-size: 100% 49.34vw;
+            }
+          }
+          &__4 {
+            &::before {
+              transform: translateY(-6%) translateX(8%);
+              background-image: url('../../../../public/assets/flowers/flower-4.svg');
+              background-size: 100% 51.2vw;
+            }
+          }
+          &__5 {
+            &::before {
+              transform: translateY(-8%) translateX(5%);
+              background-image: url('../../../../public/assets/flowers/flower-5.svg');
+              background-size: 100% 42.67vw;
+            }
+          }
+        }
+      }
+      &-back {
+        &-title {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .service-developmentService {
+    .card {
+      &-inner {
+        min-height: 312px;
+      }
+    }
+  }
+}

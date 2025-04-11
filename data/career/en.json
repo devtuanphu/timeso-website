@@ -1,0 +1,59 @@
+{
+  "jobs": {
+    "sub_title": "WE ARE HIRING",
+
+    "title": "Finding your dream jobs opportunity here",
+
+    "placeholder_search": "Search",
+
+    "arrow_left": "Previous page",
+
+    "arrow_right": "Next page",
+
+    "button_view": "View Detail",
+
+    "button_view_disabled": "Expired"
+  },
+
+  "application": {
+    "title": "APPLICATION FORM",
+    "name": {
+      "label": "Full name",
+      "messageRequired": "Please enter your full name."
+    },
+    "phone": {
+      "label": "Phone number",
+      "messageRequired": "Please enter your phone number.",
+      "messageError": "Format invalid. EX: +84911000038"
+    },
+    "email": {
+      "label": "Email address",
+      "messageRequired": "Please enter your Email address.",
+      "messageError": "Format invalid"
+    },
+    "introduce": {
+      "label": "Introduction",
+      "messageRequired": "Please enter an introduction."
+    },
+    "upload": {
+      "label": "Upload your CV",
+      "guidline": "You can only upload doc, docx and pdf files. Maximum file size is 25MB.",
+      "messageRequired": "Please upload your CV so we can know more about you."
+    },
+    "notification": {
+      "title": "Successfully Submitted",
+      "message": "Thank you for your application to AMIT. We will respond to you as soon as possible."
+    },
+    "button": "Submit now"
+  },
+
+  "career_detailContent": {
+    "button_apply": "APPLY",
+
+    "button_apply_disabled": "Expired",
+
+    "experience": "Years of experience",
+
+    "expired_name": "Expired"
+  }
+}
