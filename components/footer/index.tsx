@@ -135,7 +135,7 @@ const FooterDefault = () => {
       </Row>
       <Row gutter={24} className='footer-body'>
         <Col xs={24} md={16} xl={8}>
-          <h6 className='title'>{navigators[0].title}</h6>
+          <h6 className='title'>{navigators[0]?.title}</h6>
           <ul>
             {navigators[0].subItems.map((item, index) => (
               <li key={index}>
@@ -147,9 +147,9 @@ const FooterDefault = () => {
           </ul>
         </Col>
         <Col xs={24} md={16} xl={8} order={width > 767 && width < 1024 ? 2 : 1}>
-          <h6 className='title'>{navigators[1].title}</h6>
+          <h6 className='title'>{navigators[1]?.title}</h6>
           <ul>
-            {navigators[1].subItems.map((item: any, index: number) => (
+            {navigators[1]?.subItems.map((item: any, index: number) => (
               <li key={index} onClick={() => showModal(item?.url)}>
                 <a>{item.title}</a>
               </li>
@@ -158,9 +158,9 @@ const FooterDefault = () => {
           <PopupDetail open={isModalOpen} cancel={handleCancel} projectSlug={projectSlug} />
         </Col>
         <Col xs={24} md={8} xl={4} order={width > 767 && width < 1024 ? 1 : 2}>
-          <h6 className='title'>{navigators[2].title}</h6>
+          <h6 className='title'>{navigators[2]?.title}</h6>
           <ul>
-            {navigators[2].subItems.map((item, index) => (
+            {navigators[2]?.subItems.map((item, index) => (
               <li key={index}>
                 <Link
                   prefetch={false}
@@ -174,9 +174,9 @@ const FooterDefault = () => {
           </ul>
         </Col>
         <Col xs={24} md={8} xl={4} order={width > 767 && width < 1024 ? 3 : 3}>
-          <h6 className='title'>{navigators[3].title}</h6>
+          <h6 className='title'>{navigators[3]?.title}</h6>
           <div className='icons'>
-            {navigators[3].iconLinks.map((item, index) => (
+            {navigators[3]?.iconLinks.map((item, index) => (
               <Link key={index} prefetch={false} href={item.url} target='_blank' rel='noopener noreferrer'>
                 {item.icon.data && (
                   <Image
@@ -195,7 +195,7 @@ const FooterDefault = () => {
       <div className='footer-bottom'>
         <hr />
         <p className='footer-bottom-copyRight'>
-          Copyright © 2022 <b>AMIT GROUP</b>. All Rights Reserved | Design by <b>AMIT GROUP</b>
+          Copyright © 2025 <b>TIMESO</b>. All Rights Reserved | Design by <b>TIMESO</b>
         </p>
       </div>
     </div>
