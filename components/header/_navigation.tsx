@@ -34,20 +34,6 @@ const Navigation = (props: NavigationProps) => {
     return router.asPath.includes(path);
   };
 
-  const handleChangeLanguage = (locale: string) => {
-    router.push(router.asPath, router.asPath, { locale });
-  };
-
-  const languageMenu = {
-    items: locales.map((item) => ({
-      key: item.code,
-      label: <p className='header-language-content'>{item.name}</p>,
-      className: router.locale === item.code ? 'language-active' : '',
-      onClick: () => handleChangeLanguage(item.code),
-    })),
-    className: 'header-language-menu',
-  };
-
   const dataDropdownMenu = data
     .filter((item) => item.subItems)[0]
     ?.subItems?.map((data, index) => ({
@@ -119,19 +105,6 @@ const Navigation = (props: NavigationProps) => {
         items={width < 1024 ? dataMenu : dataMenu.slice(0, dataMenu.length - 1)}
         className={`header-menu ${activeMobile ? 'active' : ''}`}
       />
-      {/* <Dropdown
-        menu={languageMenu}
-        placement='bottom'
-        arrow={{ pointAtCenter: true }}
-        getPopupContainer={(triggerNode) => triggerNode.parentElement || triggerNode}
-        trigger={[width < 1024 ? 'click' : 'hover']}
-      >
-        <div className='header-language'>
-          <p className='header-language-content language-acronym'>
-            <GlobalOutlined /> {router.locale === 'ko' ? '한' : router.locale}
-          </p>
-        </div>
-      </Dropdown> */}
     </>
   );
 };

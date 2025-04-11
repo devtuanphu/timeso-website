@@ -54,15 +54,6 @@ const HeaderDefault = ({ theme }) => {
         <Link prefetch={false} href='/' className='header-logo' onClick={() => toggleMenu(false)}>
           {logo.data && (
             <div className='qq-chrismas-header'>
-              {theme == 'christmas' ? (
-                <Image
-                  className='qq-chrismas-header-hat'
-                  width={45}
-                  height={40}
-                  src='/assets/quick-quotes/chris-hat.png'
-                  alt='hat'
-                />
-              ) : null}
               <Image
                 src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${logo.data.attributes.url}`}
                 alt={logo.data.attributes.alternativeText || ''}

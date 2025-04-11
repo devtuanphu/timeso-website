@@ -21,11 +21,11 @@ const ContactPage = (props: PropType) => {
 
   return (
     <>
-      <SEO title={data.seo.title} description={data.seo.description} />
+      <SEO title={data?.seo?.title} description={data?.seo?.description} />
       <Banner
         class='contact-banner'
-        bg={`${process.env.NEXT_PUBLIC_STRAPI_URL}${data.bannerBackground.data.attributes.url}`}
-        title={data.bannerTitle}
+        bg={`${process.env.NEXT_PUBLIC_STRAPI_URL}${data.bannerBackground?.data?.attributes?.url}`}
+        title={data?.bannerTitle}
         content={data.bannerContent}
       />
       <ContactForm contactForm={data} contactFormNoCMS={dataJson?.contactForm} />
