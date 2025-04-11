@@ -12,6 +12,7 @@ module.exports = {
       'localhost', // Add localhost for Strapi
       'localhost:1337', // Ensure Strapi's address is allowed
       '127.0.0.1', // Ensure 127.0.0.1 is allowed for local connections
+      'admin.timeso.vn',
     ],
     formats: ['image/webp'],
   },
