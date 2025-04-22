@@ -22,7 +22,7 @@ const BlogDetailPage = (props: PropType) => {
 
   return (
     <>
-      <SEO title='BLOG - AMIT - Transform Digi Together' description={`${currentBlog?.attributes?.description}`} />
+      <SEO title={`${currentBlog?.attributes?.title}`} description={`${currentBlog?.attributes?.description}`} />
       <BlogDetailBanner data={currentBlog} className={currentBlog?.attributes?.bannerWithGradient ? 'bg-gradient' : ''} />
       {currentBlog.attributes.layout == 'leftSide' ? (
         <BlogDetailTemplate1
